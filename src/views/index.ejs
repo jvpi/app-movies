@@ -1,14 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="manifest" href="./manifest.json">
-    
-</head>
+<%- include("./templates/cabecera")%>
 <body>
-    <h1>pwa1</h1>
-    
+    <header class="header">
+        <div class="header-container-movies">
+            <nav class="header-nav">
+              <a href="/"><h1 class="header-tittle">Kamuai</h1></a>
+              
+              <div>
+                <input type="text" class="header-input-search" placeholder="buscar">
+              </div>
+
+            </nav>
+            <div class="flex-section">
+              <div class="section">
+                <div class="content">
+                  <h1 class="tittle-movie-principal">Mr <span> Robot</span></h1>
+                  <h3 class="h3-season">season 1</h3>
+                  <div class="content-iconos-estrellas">
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-half bg-yellow"></span>
+                  </div>
+                  <div>
+                    <span class="subtitulos">Accion / </span><span class="subtitulos">Drama / </span><span class="subtitulos">Suspenso</span>
+                  </div>
+                  <div>
+                    <a href="/serie/">
+                      <button type="button" id="button-play"><span class="icon-play3 icono-play"></span></button>
+                    </a>
+                  </div>
+                  <p class="content-descripcion-movie">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, amet corrupti. Architecto maiores necessitatibus soluta enim officia ab, ?</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-slider">
+            <div class="content-slider">
+                 <div class="card">
+              <img src="images/bojack.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Bojack horseman</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/blinders.webp" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Peaky blinders</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/bad.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Breaking bad</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/la casa de papel.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">La casa de papel</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/chernobil.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Chernobil</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/rick and morty.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Rick and morty</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/mrrobot.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Mr robot</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/blackmirror.jpg" alt="" class="img-bojack">
+              <div class="descripcion-movies">
+                <h1 class="card-tittle-movies">Black mirror</h1>
+                <p class="card-descripcion-movies">Comedia,drama</p>
+              </div>
+            </div>
+            </div>
+        </div>
+        <img src="images/mr-robots.webp" alt="" srcset="" class="img-header">
+      </div>
+    </header>
+    <div class='content-btn-intall'>
+        <button id="install_button" class='btn-install-hidden btn-install' hidden>
+            <span class="icon-download3"></span> Instalar App
+        </button>
+    </div>
+
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
+      
 </body>
 </html>

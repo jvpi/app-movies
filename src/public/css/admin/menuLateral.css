@@ -1,0 +1,29 @@
+.content-menu-lateral{
+	width: 20%;
+	background-color: #fff;
+	display: flex;
+	
+}
+.menu-lateral{
+	width: 100%;
+	margin-top: 75px;
+}
+.menu-laterarl-lista{
+	width: 100%;
+}
+.menu-lateral-lista{
+	color: rgb(31, 35, 40);
+}
+.menu-lateral-enlaces{
+	padding: 10px 0;
+	padding-left: 20px;
+	font-size: 1em;
+	
+}
+.menu-lateral-enlaces:hover{
+	background-color: #EBEBEB;
+	
+}
+.icon-folder{
+color:  rgb(84, 174, 255);
+}

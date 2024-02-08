@@ -1,0 +1,63 @@
+.flex-section{
+    width: 100%;
+    height: 56%;
+    display: flex;
+    justify-content: center;
+}
+
+.section{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.content{
+    width: 500px;
+
+}
+.tittle-movie-principal{
+    font-size: 1.7em;
+   padding: 10px 0;
+   text-transform: uppercase;
+   
+}
+.h3-season{
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+.tittle-movie-principal span{
+    background-color: black;
+    padding: 0 15px;
+}
+
+.bg-yellow{
+    color: rgb(235, 235, 32);
+}
+.content-descripcion-movie{
+    margin-top: 10px;
+   font-size: 0.8em;
+    
+}
+.content-icono{
+    background-color: red;
+    padding: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.icono-play{
+    background-color: gray;
+    padding: 10px;
+    margin:7px 0 ;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .3s ease-in;
+}
+.icono-play:hover{
+    background-color: rgb(187, 187, 187);
+}
+
+/*-----*/
+
+

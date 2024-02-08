@@ -1,0 +1,25 @@
+.content-btn-intall{
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	
+}
+.btn-install-hidden{
+
+}
+
+.btn-install{
+	cursor: pointer;
+	border: solid 1px rgb(151, 43, 213);
+
+	color: #fff;
+	padding: 7px 13px;
+	border-radius: 4px;
+	font-size: 1.5em;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	background: rgb(151, 43, 213);
+	
+}

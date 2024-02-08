@@ -1,0 +1,15 @@
+.nav{
+    width: 100%;
+    height: inherit;
+}
+.nav-ul{
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+  
+    height: inherit;
+}
+.nav-li{
+    margin-right: 15px;
+}
