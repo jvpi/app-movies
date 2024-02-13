@@ -1,5 +1,5 @@
 @media (max-width: 420px) {
-
+ 
   .content-slider {
     overflow: auto;
   }
@@ -48,6 +48,9 @@
   .modal-video {
     width: 100%;
 
+  }
+ .btn-install{
+    display: block;
   }
 }
 

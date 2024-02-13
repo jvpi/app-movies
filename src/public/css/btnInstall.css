@@ -5,13 +5,12 @@
 	
 }
 .btn-install-hidden{
-
+	display: none;
 }
 
 .btn-install{
 	cursor: pointer;
 	border: solid 1px rgb(151, 43, 213);
-
 	color: #fff;
 	padding: 7px 13px;
 	border-radius: 4px;
