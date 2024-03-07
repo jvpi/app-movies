@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./templates/cabecera")%>
+<head>
+    <%- include("./templates/cabecera")%>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/card.css' />
+    <link rel='stylesheet' href='/css/eslider.css' /> 
+    <link rel='stylesheet' href='/css/bodybg.css' />
+    <link rel='stylesheet' href='/css/modal.css' />
+    <link rel='stylesheet' href='/css/btnInstall.css' />
+    <link rel='stylesheet' href='/iconos/estrellas/style.css' />
+    <link rel='stylesheet' href='/iconos/play/style.css' />
+    <link rel='stylesheet' href='/iconos/cross/style.css' />
+    <link rel='stylesheet' href='/iconos/descarga/style.css' />
+    <link rel='stylesheet' href='/css/responsive.css' />
+</head>
 <body>
+  
     <header class="header">
         <div class="header-container-movies">
             <nav class="header-nav">
@@ -38,62 +52,64 @@
         </div>
         <div class="flex-slider">
             <div class="content-slider">
-                 <div class="card">
-              <img src="images/bojack.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Bojack horseman</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/blinders.webp" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Peaky blinders</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/bad.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Breaking bad</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/la casa de papel.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">La casa de papel</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/chernobil.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Chernobil</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/rick and morty.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Rick and morty</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/mrrobot.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Mr robot</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/blackmirror.jpg" alt="" class="img-bojack">
-              <div class="descripcion-movies">
-                <h1 class="card-tittle-movies">Black mirror</h1>
-                <p class="card-descripcion-movies">Comedia,drama</p>
-              </div>
-            </div>
+                <div class="card">
+                    <a href=<%=`/series/${series[0].urlSerie}/${series[0].temporada} `%> >
+                      <img src= <%=`images/${series[0].img} `%> alt="" class="img-bojack">
+                      <div class="descripcion-movies">
+                        <h1 class="card-tittle-movies"><%=series[0].nombre %></h1>
+                        <p class="card-descripcion-movies"><%=series[0].descripcion %></p>
+                      </div>
+                    </a>
+                </div>
+                <div class="card">
+                  <img src="images/blinders.webp" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Peaky blinders</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/bad.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Breaking bad</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/la casa de papel.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">La casa de papel</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/chernobil.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Chernobil</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/rick and morty.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Rick and morty</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/mrrobot.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Mr robot</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="images/blackmirror.jpg" alt="" class="img-bojack">
+                  <div class="descripcion-movies">
+                    <h1 class="card-tittle-movies">Black mirror</h1>
+                    <p class="card-descripcion-movies">Comedia,drama</p>
+                  </div>
+                </div>
             </div>
         </div>
         <img src="images/mr-robots.webp" alt="" srcset="" class="img-header">
@@ -104,13 +120,6 @@
             <span class="icon-download3"></span> Instalar App
         </button>
     </div>
-
- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quidem officiis eaque, necessitatibus laboriosam id, vitae quos. Placeat dolore saepe harum magnam sequi iste exercitationem nobis unde, possimus blanditiis enim?</p>
 
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/header-series.css"/>
+  <link rel="stylesheet" href="/css/series-video.css"/>
+  <%- include("./templates/cabecera")%>
+  <script type="module" defer src="/javascripts/reemplazarCaracter.js"></script>
+  <script type="module" defer src="/javascripts/seleccionarCapitulos.js"></script>
+</head>
+<body>
+  <header class="header-serie">
+    <div class="content-link">
+      <a href="/" class="header-link">Kamuai</a>
+    </div>
+  </header>
+  <nav class="nav">
+      <ul>
+      <% for (var i = 0; i < series.length; i++) { %>
+             <li>
+                <button class="nav-temporada">
+                  <%=`${series[i].temporada}`%>
+                </button>
+                <% for (var j = 0; j < series[i].capitulos.length; j++) { %>
+                <p class="span-capitulos">
+                 <%=`${series[i].capitulos[j]}`%>
+                </p>
+                <%  } %>
+             
+            </li>
+      <%  } %>
+        
+      </ul>
+    </nav>
+    
+  <div class="centrar-content-video">
+    
+    <div class="content-video" id="content-video">
+      
+    </div>
+  </div>
+  
+</body>
+</html>

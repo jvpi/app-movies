@@ -1,0 +1,21 @@
+.centrar-content-video{
+	width: 100%;
+	height: calc(100vh - 50px) ;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+.content-video{
+	width: 50%;
+	height:auto;
+}
+.nav{
+	background: #000;
+	position: absolute;
+	width: 15%;
+	height: calc(100vh - 50px) ;
+}
+.nav-link{
+	color: #fff;
+}
