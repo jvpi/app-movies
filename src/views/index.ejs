@@ -10,7 +10,7 @@
     <link rel='stylesheet' href='/css/btnInstall.css' />
     <link rel='stylesheet' href='/iconos/estrellas/style.css' />
     <link rel='stylesheet' href='/iconos/play/style.css' />
-    <link rel='stylesheet' href='/iconos/cross/style.css' />
+    
     <link rel='stylesheet' href='/iconos/descarga/style.css' />
     <link rel='stylesheet' href='/css/responsive.css' />
 </head>
@@ -53,7 +53,7 @@
         <div class="flex-slider">
             <div class="content-slider">
                 <div class="card">
-                    <a href=<%=`/series/${series[0].urlSerie}/${series[0].temporada} `%> >
+                    <a href=<%=`/series/${series[0].urlSerie} `%> >
                       <img src= <%=`images/${series[0].img} `%> alt="" class="img-bojack">
                       <div class="descripcion-movies">
                         <h1 class="card-tittle-movies"><%=series[0].nombre %></h1>

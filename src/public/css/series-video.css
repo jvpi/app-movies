@@ -2,23 +2,135 @@
 	width: 100%;
 	height: calc(100vh - 50px) ;
 	display: flex;
-
 	justify-content: center;
 	align-items: center;
 }
 .content-video{
 	width: 50%;
 	height:auto;
+	
 }
 .nav{
-	background: #000;
+	background: black;
 	position: absolute;
 	width: 15%;
-	height: calc(100vh - 50px) ;
+	height: calc(100vh - 8vh);  
+	
+	
 }
 .nav-link{
 	color: #fff;
 }
-.span-capitulos{
+.ul{
+	height: inherit;
+	padding-top: 20px;
+}
+
+.icono-video-camera{
+	margin-right: 8px;
+}
+.acordeon .capitulos{ /*contenido*/
+	height: 0px;
+	
+	overflow: hidden ;
+	transition: height .3s ease ;
+	
+}
+.acordeon .lista.activo .capitulos{ /*contenido*/
+	height: 23px;
+	display: block;
+}
+.lista{
+	text-align: center;
+	width: 90%;
+}
+.temporada{
+	transition: background .15s ease ;
+	
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 7px 0;
+
+}
+.temporada:hover, .capitulos:hover  {
+	background-color: #353535;
+	
+}
+.capitulos{
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+
+.enlace-inicio{
+	
+	width: 15%;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	 font-weight: bold;
+  font-size: 1.7em;
+ 
+}
+.icono-play-series{
+	
+	 background-color: gray;
+    padding: 2px;
+    
+    display: inline-block;
+}
+.menu-hamburguesa{
 	display: none;
+}
+@media (max-width: 420px) {
+	.header-serie{
+		height: 10vh;
+	}
+	.enlace-inicio{
+		background-color: #000;
+		width: 60%;
+		font-size: 1.9em
+	}
+	.menu-hamburguesa{
+		width: 40%;
+		background-color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.nav{
+		height: 0;
+		overflow: hidden;
+		width: 100%;
+		font-size: 1.5em;
+	}
+	.temporada:hover, .capitulos:hover{
+		background-color: transparent ;
+	}
+	.temporada{
+		transition: none;
+		cursor: default ;
+	}
+	#icon-cross{
+		display: none;
+		font-size: 1.8em;
+		
+	}
+	.icon-menu{
+		font-size: 1.8em;
+		
+	}
+
+	.content-video{
+		width: 100%;
+	}
+
+	.aparecer-menu{
+		height: calc(100vh - 7vh);
+		z-index: 10;
+	}
+
 }

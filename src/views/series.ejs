@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/header-series.css"/>
-  <link rel="stylesheet" href="/css/series-video.css"/>
+  <link rel='stylesheet' href='/iconos/play/style.css' />
   <%- include("./templates/cabecera")%>
   <script type="module" defer src="/javascripts/reemplazarCaracter.js"></script>
   <script type="module" defer src="/javascripts/seleccionarCapitulos.js"></script>
+  <link rel="stylesheet" href="/css/series-video.css"/>
+  <script type="module" defer src="/javascripts/menuDesplegable.js"></script>
+  <script type="module" defer src="/javascripts/menuHamburguesa.js"></script>
+  <link rel='stylesheet' href='/iconos/menu/style.css' />
+  <link rel='stylesheet' href='/iconos/cross/style.css' />
+   
+    <link rel='stylesheet' href='/iconos/video/style.css' />
 </head>
-<body>
+<body id="body">
   <header class="header-serie">
-    <div class="content-link">
-      <a href="/" class="header-link">Kamuai</a>
+    <div class="enlace-inicio">
+
+       <a href="/" class="header-link">
+        <span class="icon-play3 icono-play-series"></span>
+        <span>Kamuai</span>
+       </a>
+    </div>
+    <div class="menu-hamburguesa" id="menu-hamburguesa">
+      <span class="icon-menu" id="icon-menu"></span>
+      <span class="icon-cross" id="icon-cross"></span>
     </div>
   </header>
-  <nav class="nav">
-      <ul>
+  <nav class="nav" id="nav">
+  
+      <ul id="ul" class="acordeon ul">
       <% for (var i = 0; i < series.length; i++) { %>
-             <li>
-                <button class="nav-temporada">
-                  <%=`${series[i].temporada}`%>
-                </button>
-                <% for (var j = 0; j < series[i].capitulos.length; j++) { %>
-                <p class="span-capitulos">
-                 <%=`${series[i].capitulos[j]}`%>
-                </p>
-                <%  } %>
-             
-            </li>
+             <li class="lista">
+                  <h1 class="h1 temporada">
+                    <span class="icon-video-camera icono-video-camera"></span>
+                     <%=`${series[i].temporada}`%>
+                  </h1>
+                   
+                    <% for (var j = 0; j < series[i].capitulos.length; j++) { %>
+                    <p class="capitulos"> <!-- contenido -->
+
+                     <%=`${series[i].capitulos[j]}`%>
+                    </p>
+                    <%  } %>
+              </li>
       <%  } %>
         
       </ul>
@@ -35,9 +53,10 @@
   <div class="centrar-content-video">
     
     <div class="content-video" id="content-video">
-      
+     
     </div>
   </div>
+ 
   
 </body>
 </html>

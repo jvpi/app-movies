@@ -15,4 +15,4 @@ function insertarEnElementoHtml() {
 		elemento.innerHTML = reemplazarCaracter()[index]
 	})
 }
-insertarEnElementoHtml()
+//insertarEnElementoHtml()
