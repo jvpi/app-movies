@@ -84,6 +84,36 @@
 .menu-hamburguesa{
 	display: none;
 }
+.content-buscador{
+	
+	margin: 0 auto;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content-centrar{
+	
+	width: 100%;
+}
+.buscador{
+	border: 1px solid gray;
+	width: 70%;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius:15px;
+	padding: 8px 15px;
+	outline: none;
+}
+.boton-buscar{
+	background-color: #464646;
+	padding: 8px;
+	width: 64px;
+	margin-left: -5px;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	cursor: pointer;
+	border: 1px solid gray;
+}
 @media (max-width: 420px) {
 	.header-serie{
 		height: 10vh;
