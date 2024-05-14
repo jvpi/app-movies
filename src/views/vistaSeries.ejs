@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
+  <%- include("./templates/cabecera")%>
   <link rel="stylesheet" href="/css/header-series.css"/>
   <link rel='stylesheet' href='/iconos/play/style.css' />
-  <%- include("./templates/cabecera")%>
+ <link rel='stylesheet' href='/css/btnInstall.css' />
+<link rel="stylesheet" href="/css/series-video.css"/>
   <script type="module" defer src="/javascripts/reemplazarCaracter.js"></script>
   <script type="module" defer src="/javascripts/seleccionarCapitulos.js"></script>
-  <link rel="stylesheet" href="/css/series-video.css"/>
+  
   <script type="module" defer src="/javascripts/menuDesplegable.js"></script>
   <script type="module" defer src="/javascripts/menuHamburguesa.js"></script>
-  <script type="module" defer src="/javascripts/buscador.js"></script>
+ 
   <link rel='stylesheet' href='/iconos/menu/style.css' />
   <link rel='stylesheet' href='/iconos/cross/style.css' />
-   
-    <link rel='stylesheet' href='/iconos/video/style.css' />
+  <link rel='stylesheet' href='/iconos/video/style.css' />
+   <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
+<script  type="module" defer src="/javascripts/btnInstallPwa.js"></script>
 </head>
 <body id="body">
-  <header class="header-serie">
-    <div class="enlace-inicio">
+  <header hidden class="header-serie" > 
+    <div class="ocultar-conten-flecha-izq" id="content-flecha-izq">
+      <span class="icon-arrow-left2"></span>
+    </div>
+    <div class="enlace-inicio " id="enlace-inicio">
 
        <a href="/" class="header-link">
         <span class="icon-play3 icono-play-series"></span>
@@ -28,10 +35,12 @@
       <span class="icon-menu" id="icon-menu"></span>
       <span class="icon-cross" id="icon-cross"></span>
     </div>
-    <div class="content-buscador">
+    <div class="content-buscador " id="content-buscador">
       <div class="content-centrar">
         <input type="text" class="buscador" id="buscador">
-        <button class="boton-buscar">B</button>
+        <button class="boton-buscar boton-buscar-resposive" id="boton-buscar">
+              <span class="icon-search"></span>
+        </button>
       </div>
       
     </div>
@@ -65,6 +74,10 @@
     </div>
   </div>
  
-  
+  <div class='content-btn-intall ' id='content-btn-intall' >
+        <button id="install_button" class='btn-install' hidden>
+            <span class="icon-download3"></span> Instalar App
+        </button>
+    </div>
 </body>
 </html>

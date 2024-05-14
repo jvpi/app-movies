@@ -1,5 +1,5 @@
 {
-    "name": "the game zone",
+    "name": "the game ",
     "short_name": "the game zone",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
@@ -9,7 +9,7 @@
     "start_url": "./",
     "icons": [
         {
-            "src": "./img/consola.png",
+            "src": "./src/img/consola.png",
             "type": "image/png",
             "sizes": "512x512"
         }

@@ -1,3 +1,5 @@
+
+
 body{
  background-color: #131314;
  
@@ -50,4 +52,36 @@ body{
   z-index: -1;
  
 }
+.content-buscador{
+  width: 50%;
+}
+.content-centrar{
+ margin-left: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.buscador{
+  border: 1px solid gray;
+  width: 70%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius:15px;
+  padding: 8px 15px;
+  outline: none;
 
+
+}
+.boton-buscar{
+  background-color: #464646;
+  padding: 8px;
+  width: 64px;
+  margin-left: -5px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+  border: 1px solid gray;
+
+}
+.border-color-buscador{
+  border-color: #F4F4F4;
+}

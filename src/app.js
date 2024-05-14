@@ -28,7 +28,7 @@ app.use(cookieParser());
 let directoioPadre = path.dirname(__dirname)
 app.use(express.static(directoioPadre))
 app.use(express.static(path.join(__dirname, 'public')))
-console.log(path.dirname(__dirname))
+
 app.use(indexRouter);
 //app.use('/users', usersRouter);
 

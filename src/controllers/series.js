@@ -26,7 +26,7 @@ const series = [
 ]
 
 controller.series = function(req, res, next) {
-  res.render('series',{series} );
+  res.render('vistaSeries',{series} );
 }
 
 

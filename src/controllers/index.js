@@ -8,7 +8,7 @@ const series = [{
   urlSerie:'bojack'
 }]
 controller.paginaInicio = function(req, res, next) {
-  res.render('index', { series});
+  res.render('vistaInicio', { series});
   
 }
 

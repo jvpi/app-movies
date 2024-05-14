@@ -4,9 +4,6 @@
     overflow: auto;
   }
 
-  .header-nav {
-    display: block;
-  }
 
   .card {
     min-width: 100px;
@@ -27,7 +24,7 @@
     font-size: 1.2em;
     text-align: center;
     margin: 8px 0;
-
+    width: 20%;
   }
 
   .tittle-movie-principal {
@@ -49,9 +46,9 @@
     width: 100%;
 
   }
- .btn-install{
+ /*.btn-install{
     display: block;
-  }
+  }*/
 }
 
 @media (max-width: 1190px) {

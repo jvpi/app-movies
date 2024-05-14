@@ -1,5 +1,6 @@
 let deferredPrompt = null
 let btnInstall = document.getElementById('install_button')
+
 btnInstall.addEventListener('click',installPwa)
 addEventListener('beforeinstallprompt',function (e) {
 	deferredPrompt = e
@@ -14,6 +15,7 @@ function installPwa() {
     if (choiceResult.outcome === "accepted") {
       console.log("PWA setup accepted");
       btnInstall.hidden = true;
+      btnInstall.classList.remove('btn-install')
     } else {
       console.log("PWA setup rejected");
 

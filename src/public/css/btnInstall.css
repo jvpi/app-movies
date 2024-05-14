@@ -1,10 +1,9 @@
 .content-btn-intall{
-	padding: 5px;
 	display: flex;
 	justify-content: center;
 	
 }
-.btn-install-hidden{
+.btn-install{
 	display: none;
 }
 
