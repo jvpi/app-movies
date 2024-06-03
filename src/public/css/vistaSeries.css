@@ -31,7 +31,6 @@
 }
 .acordeon .capitulos{ /*contenido*/
 	height: 0px;
-	
 	overflow: hidden ;
 	transition: height .3s ease ;
 	
@@ -94,14 +93,14 @@
 	
 }
 .content-centrar{
-	width: 100%;
+	width: 75%;
 }
 .buscador{
 	border: 1px solid gray;
 	width: 70%;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius:15px;
-	padding: 11px 15px;
+	padding: 8px 15px;
 
 	outline: none;
 	
@@ -128,6 +127,13 @@ font-size: 15px;
 .border-color-buscador{
 	border-color: #F4F4F4;
 }
+
+
+
+
+/*----------------------resposive------------------------------*/
+
+
 
 @media (max-width: 420px) {
 	.btn-install{
@@ -192,6 +198,7 @@ font-size: 15px;
     }
     .buscador{
     	display: none;
+    	padding: 11px 15px;
     }
     
     .boton-buscar-resposive{
@@ -210,9 +217,9 @@ font-size: 15px;
 	.ocultar-enlace{
 		display: none;
 	}
-	.right{
+	/*.right{
 		right: 23%;
-	}
+	}*/
 	.content-flecha-izq{
 		display: inline-block;
 		display: flex;
@@ -223,6 +230,12 @@ font-size: 15px;
 	}
 	.ocultar-conten-flecha-izq{
 		display: none;
+	}
+	.ocultar-menu-hamburguesa{
+		display: none;
+	}
+	.content-centrar{
+		width: 100%;
 	}
 	
 }

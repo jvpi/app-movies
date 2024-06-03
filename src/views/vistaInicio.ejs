@@ -6,22 +6,29 @@
     <link rel='stylesheet' href='/css/card.css' />
     <link rel='stylesheet' href='/css/eslider.css' /> 
     <link rel='stylesheet' href='/css/bodybg.css' />
-    <link rel='stylesheet' href='/css/modal.css' />
     <link rel='stylesheet' href='/iconos/estrellas/style.css' />
     <link rel='stylesheet' href='/iconos/play/style.css' />
     <link rel='stylesheet' href='/iconos/descarga/style.css' />
     <link rel='stylesheet' href='/css/responsive.css' />
+    <script type="module" defer src="/javascripts/buscadorVistaInicio.js"></script>
+    <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
 </head>
 <body>
   
     <header class="header">
         <div class="header-container-movies">
             <nav class="header-nav">
-              <a href="/"><h1 class="header-tittle">Kamuai</h1></a>
-                <div class="content-buscador">
+                <div class="ocultar-conten-flecha-izq content-flecha-izq" id="content-flecha-izq">
+                   <span class="icon-arrow-left2"></span>
+                </div>
+              <div class="content-link-vista-inicio" id="enlace-inicio">
+               
+                  <a href="/"><h1 class="header-tittle">Kamuai</h1></a>
+              </div>
+                <div class="content-buscador" id="content-buscador">
                   <div class="content-centrar">
-                    <input type="text" class="buscador" id="buscador">
-                    <button class="boton-buscar">
+                    <input type="text" class="buscador vista-bsucador buscador-oculto" id="buscador">
+                    <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
                       <span class="icon-search"></span>
                     </button>
                   </div>

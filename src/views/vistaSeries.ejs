@@ -5,19 +5,21 @@
   <%- include("./templates/cabecera")%>
   <link rel="stylesheet" href="/css/header-series.css"/>
   <link rel='stylesheet' href='/iconos/play/style.css' />
- <link rel='stylesheet' href='/css/btnInstall.css' />
-<link rel="stylesheet" href="/css/series-video.css"/>
+  <link rel='stylesheet' href='/css/btnInstall.css' />
+  <link rel="stylesheet" href="/css/vistaSeries.css"/>
   <script type="module" defer src="/javascripts/reemplazarCaracter.js"></script>
   <script type="module" defer src="/javascripts/seleccionarCapitulos.js"></script>
-  
+  <script type="module" defer src="/javascripts/buscador.js"></script>
   <script type="module" defer src="/javascripts/menuDesplegable.js"></script>
   <script type="module" defer src="/javascripts/menuHamburguesa.js"></script>
- 
+  <script type="module" defer src="/javascripts/buscador.js"></script>
+   <script type="module" defer src="/javascripts/btnInstallPwa.js"></script>
+
   <link rel='stylesheet' href='/iconos/menu/style.css' />
   <link rel='stylesheet' href='/iconos/cross/style.css' />
   <link rel='stylesheet' href='/iconos/video/style.css' />
    <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
-<script  type="module" defer src="/javascripts/btnInstallPwa.js"></script>
+
 </head>
 <body id="body">
   <header hidden class="header-serie" > 
@@ -38,7 +40,7 @@
     <div class="content-buscador " id="content-buscador">
       <div class="content-centrar">
         <input type="text" class="buscador" id="buscador">
-        <button class="boton-buscar boton-buscar-resposive" id="boton-buscar">
+        <button class="boton-buscar boton-buscar-resposive " id="boton-buscar">
               <span class="icon-search"></span>
         </button>
       </div>

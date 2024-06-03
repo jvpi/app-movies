@@ -3,6 +3,7 @@ let elementoBotonBuscar = document.getElementById('boton-buscar')
 let elementoEnlaceInicio = document.getElementById('enlace-inicio')
 let elementoContentBuscador = document.getElementById('content-buscador')
 let elementoContentFlechaIzq = document.getElementById('content-flecha-izq')
+let menuHamburguesa = document.getElementById('menu-hamburguesa')
 elementoBuscador.addEventListener('focus', function (argument) {
 	this.classList.add('border-color-buscador')
 	
@@ -20,8 +21,11 @@ function aparecerBuscador() {
 		elementoEnlaceInicio.classList.add('ocultar-enlace')
 		elementoBuscador.style.display = 'inline'
 		elementoContentBuscador.classList.add('right')
+		elementoContentBuscador.style.width = '79%'
+		elementoContentBuscador.style.right = '0'
 		elementoContentFlechaIzq.classList.remove('ocultar-conten-flecha-izq')
 		elementoContentFlechaIzq.classList.add('content-flecha-izq')
+		menuHamburguesa.classList.add('ocultar-menu-hamburguesa')
 	})
 	
 }
@@ -30,9 +34,11 @@ function ocultarBuscador() {
 		elementoBotonBuscar.classList.add('boton-buscar-resposive')
 		elementoEnlaceInicio.classList.remove('ocultar-enlace')
 		elementoBuscador.style.display = 'none'
-		elementoContentBuscador.classList.remove('right')
+		elementoContentBuscador.style.width = 'auto'
+		elementoContentBuscador.style.right = '28%'
 		this.classList.add('ocultar-conten-flecha-izq')
 		this.classList.remove('content-flecha-izq')
+		menuHamburguesa.classList.remove('ocultar-menu-hamburguesa')
 	})
 	
 }

@@ -71,6 +71,9 @@ body{
 
 
 }
+.content-link-vista-inicio{
+  width: 40%;
+}
 .boton-buscar{
   background-color: #464646;
   padding: 8px;
@@ -85,3 +88,8 @@ body{
 .border-color-buscador{
   border-color: #F4F4F4;
 }
+
+.ocultar-conten-flecha-izq{
+   
+    display: none;
+  }
