@@ -53,9 +53,9 @@ img, picture, video, iframe, figure {
   /* opcional */
   -o-object-fit: cover;
      object-fit: cover;
-  /* opcional */
+  /* opcional 
   -o-object-position: center center;
-     object-position: center center;
+     object-position: center center;*/
 }
 
 /* Reseteamos los enlaces para funcionar como cajas... */

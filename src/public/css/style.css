@@ -71,6 +71,12 @@ body{
 
 
 }
+
+.form-resultado-incio{
+  width: 100%;
+   display: flex;
+  justify-content: flex-end;
+}
 .content-link-vista-inicio{
   width: 40%;
 }

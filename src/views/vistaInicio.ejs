@@ -12,6 +12,9 @@
     <link rel='stylesheet' href='/css/responsive.css' />
     <script type="module" defer src="/javascripts/buscadorVistaInicio.js"></script>
     <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
+    <script type="module" defer src="/javascripts/validarBuscador.js"></script>
+    <script type="module" defer src="/javascripts/borderFocusBuscador.js"></script>
+
 </head>
 <body>
   
@@ -27,15 +30,15 @@
               </div>
                 <div class="content-buscador" id="content-buscador">
                   <div class="content-centrar">
-                    <form action="/resultado" method="get" class="form-resultado-incio">
+                    <form action="/resultado" method="get" class="form-resultado-incio" id="form-resultado">
                       <input type="text" class="buscador vista-bsucador buscador-oculto" id="buscador">
-                       <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
+                      <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
                           <span class="icon-search"></span>
-                        </button>
+                      </button>
                       
                     </form>
                     
-                    
+                      
                    
                       <!-- <a href="/resultado" id="link-resultado"></a> -->
                         

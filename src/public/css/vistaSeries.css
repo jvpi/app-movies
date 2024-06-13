@@ -74,10 +74,8 @@
  
 }
 .icono-play-series{
-	
 	 background-color: gray;
     padding: 2px;
-    
     display: inline-block;
 }
 .menu-hamburguesa{
@@ -101,22 +99,19 @@
 	border-top-left-radius: 15px;
 	border-bottom-left-radius:15px;
 	padding: 8px 15px;
-
 	outline: none;
 	
 }
 .boton-buscar{
 	background-color: #464646;
 	padding: 8px;
-
 	width: 64px;
 	margin-left: -5px;
 	border-bottom-right-radius: 15px;
 	border-top-right-radius: 15px;
 	cursor: pointer;
 	border: 1px solid gray;
-	
-position: absolute;
+	position: absolute;
 }
 .icon-search{
 font-size: 15px;
@@ -203,12 +198,11 @@ font-size: 15px;
     
     .boton-buscar-resposive{
 		background-color: transparent;
-		padding: 8px;
+		
 		width: 33px;
 		margin-left: 0px;
 		border-bottom-right-radius: 0px;
 		border-top-right-radius: 0px;
-		
 		border: 0;
 	}
 	.icon-search{
