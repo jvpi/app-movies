@@ -73,7 +73,7 @@ body{
 }
 
 .form-resultado-incio{
-  width: 100%;
+  width: 80%;
    display: flex;
   justify-content: flex-end;
 }
@@ -95,7 +95,7 @@ body{
   border-color: #F4F4F4;
 }
 
-.ocultar-conten-flecha-izq{
+.ocultar-content-flecha-izq{
    
     display: none;
   }

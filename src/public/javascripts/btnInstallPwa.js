@@ -1,14 +1,22 @@
 let deferredPrompt = null
 let btnInstall = document.getElementById('install_button')
+let classBtnI = document.getElementsByClassName('btn-install')
+let prompt;
+
 
 btnInstall.addEventListener('click',installPwa)
 addEventListener('beforeinstallprompt',function (e) {
 	deferredPrompt = e
 	btnInstall.hidden = false;
-  
+  btnInstall.classList.add('btn-install')
+  prompt = true
+ 
 })
 
+
+
 function installPwa() {
+ 
 	deferredPrompt.prompt();
 	btnInstall.disabled = true
 	deferredPrompt.userChoice.then(choiceResult => {
@@ -26,4 +34,7 @@ function installPwa() {
 }
 window.addEventListener("appinstalled", evt => {
   console.log("appinstalled fired", evt);
+  
 });
+
+

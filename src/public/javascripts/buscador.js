@@ -1,4 +1,4 @@
-let elementoBuscador = document.getElementById('buscador')
+let elementoBuscador = document.getElementById('buscador-vista-serie')
 let elementoBotonBuscar = document.getElementById('boton-buscar')
 let elementoEnlaceInicio = document.getElementById('enlace-inicio')
 let elementoContentBuscador = document.getElementById('content-buscador')

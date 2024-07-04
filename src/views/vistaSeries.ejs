@@ -14,6 +14,7 @@
   <script type="module" defer src="/javascripts/menuHamburguesa.js"></script>
   <script type="module" defer src="/javascripts/buscador.js"></script>
   <script type="module" defer src="/javascripts/btnInstallPwa.js"></script>
+  <script type="module" defer src="/javascripts/validarBuscadorVistaSerie.js"></script>
   <link rel='stylesheet' href='/iconos/menu/style.css' />
   <link rel='stylesheet' href='/iconos/cross/style.css' />
   <link rel='stylesheet' href='/iconos/video/style.css' />
@@ -38,10 +39,13 @@
     </div>
     <div class="content-buscador " id="content-buscador">
       <div class="content-centrar">
-        <input type="text" class="buscador" id="buscador">
-        <button class="boton-buscar boton-buscar-resposive " id="boton-buscar">
-              <span class="icon-search"></span>
-        </button>
+        <form action="/resultado" id="form-vista-serie">
+          <input type="text" class="buscador" id="buscador-vista-serie">
+          <button class="boton-buscar boton-buscar-resposive " id="boton-buscar">
+                <span class="icon-search"></span>
+          </button>
+        </form>
+        
       </div>
       
     </div>
@@ -74,11 +78,14 @@
      
     </div>
   </div>
- 
+ <!-- class='btn-install' -->
   <div class='content-btn-intall ' id='content-btn-intall' >
-        <button id="install_button" class='btn-install' hidden>
+        <button id="install_button" hidden  >
             <span class="icon-download3"></span> Instalar App
         </button>
-    </div>
+  </div>
+  <div class="prueba">
+    
+  </div>
 </body>
 </html>

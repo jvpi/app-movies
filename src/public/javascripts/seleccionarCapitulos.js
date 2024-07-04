@@ -19,7 +19,7 @@ function crearVideoTemplate() {
 			</video> 
 		`
 	}
-	return
+		return
 	
 }
  

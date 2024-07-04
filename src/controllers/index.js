@@ -1,4 +1,6 @@
 const controller = {}
+const {Pool} = require('pg')
+const po
 const series = [{
   nombre:'bojack horseman',
   img:'bojack.jpg',
