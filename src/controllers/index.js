@@ -1,6 +1,12 @@
 const controller = {}
-const {Pool} = require('pg')
-const po
+// const {Pool} = require('pg')
+const pool = require('./db.js')
+async function consulta (){
+const result = await pool.query('select * from serie')
+  console.log(result)
+}
+
+consulta ()
 const series = [{
   nombre:'bojack horseman',
   img:'bojack.jpg',
@@ -13,6 +19,8 @@ controller.paginaInicio = function(req, res, next) {
   res.render('vistaInicio', { series});
   
 }
+function x(){
 
+}
 
 module.exports = controller;
