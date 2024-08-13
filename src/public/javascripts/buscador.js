@@ -21,11 +21,13 @@ if (isMobile) {
 
 function aparecerBuscador() {
 	elementoBotonBuscar.addEventListener('click',function (argument) {
-		this.classList.remove('boton-buscar-resposive')
+		this.classList.add('boton-buscar-left-top')
+		// this.style.right = '17%'
+		// this.style.top = '2%'
 		elementoEnlaceInicio.classList.add('ocultar-enlace')
 		elementoBuscador.style.display = 'inline'
-		elementoContentBuscador.classList.add('right')
-		elementoContentBuscador.style.width = '79%'
+		//elementoContentBuscador.classList.add('right')
+		//elementoContentBuscador.style.width = '79%'
 		elementoContentBuscador.style.right = '0'
 		elementoContentFlechaIzq.classList.remove('ocultar-conten-flecha-izq')
 		elementoContentFlechaIzq.classList.add('content-flecha-izq')
@@ -35,7 +37,7 @@ function aparecerBuscador() {
 }
 function ocultarBuscador() {
 		elementoContentFlechaIzq.addEventListener('click',function () {
-			elementoBotonBuscar.classList.add('boton-buscar-resposive')
+			elementoBotonBuscar.classList.remove('boton-buscar-left-top')
 			elementoEnlaceInicio.classList.remove('ocultar-enlace')
 			elementoBuscador.style.display = 'none'
 			elementoContentBuscador.style.width = 'auto'
@@ -46,4 +48,3 @@ function ocultarBuscador() {
 		})
 		
 	}
-

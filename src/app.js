@@ -26,6 +26,7 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')),
 // express.static(path.join(__dirname)));
 let directoioPadre = path.dirname(__dirname)
+console.log(directoioPadre)
 app.use(express.static(directoioPadre))
 app.use(express.static(path.join(__dirname, 'public')))
 

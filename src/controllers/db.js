@@ -1,14 +1,19 @@
-const {Pool} = require('pg')
+// const {Pool} = require('pg')
 
-  const pool = new Pool({
-	user:'postgres',
-	host:'localhost',
-	password: "123456",
-	port:"5432",
-	database:"series" 
+//   const pool = new Pool({
+// 	user:'postgres',
+// 	host:'localhost',
+// 	password: "123456",
+// 	port:"5432",
+// 	database:"series" 
 
-})
-module.exports = pool
+// })
+require('dotenv').config()
+
+const {MongoClient}  = require('mongodb')
+const uri = process.env.URI
+const client = new MongoClient(uri)
+module.exports = client
 // javaScript
 // const { Client } = require('pg');
 

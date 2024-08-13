@@ -7,39 +7,38 @@ const lista = Array.from(document.querySelectorAll('.lista'))
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 
-function aparecerMenu() {
+function aparecerMenuResponsive() {
 
 	iconoMenu.addEventListener('click', function (argument) {
 		nav.classList.add('aparecer-menu')
-		iconoCross.style.display = 'inline-block'
 		iconoMenu.style.display = 'none'
-		
 	})
 }
 
-function ocultarMenu() {
+function ocultarMenuResponsive() {
 	body.addEventListener('click', function (e) {
-
-		if ( e.target.className == 'capitulos' || e.target.className == 'icon-cross' ) {
-			iconoCross.style.display = 'none'
+// e.target.className == 'capitulo' ||
+		if ( e.target.className == 'icon-cross' ) {
 			nav.classList.remove('aparecer-menu')
 			iconoMenu.style.display= 'inline-block'
-
-		let w = window.innerWidth;
-			
-		lista.forEach(function (elemento) {	
-			if (w < 420) {
-				lista.forEach(function (elemento) {
-					elemento.classList.remove('activo')
-				})
-			}
-
-		})
+			menuOcultoPantallaCompleta ()
 		}
 	})
 	
 }
+const ul = document.getElementById('ul')
+function menuVisiblePantallaCompleta () {
+	const iconMenuHamburguesa = document.getElementById('icon-menu-desplegable')
+	
+	iconMenuHamburguesa.addEventListener('click',function () {
+		nav.classList.add('nav-visible')
+	})
+}
+function menuOcultoPantallaCompleta () {
+	nav.classList.remove('nav-visible')
+}
+aparecerMenuResponsive()
+ocultarMenuResponsive()
+menuVisiblePantallaCompleta ()
 
-aparecerMenu()
-ocultarMenu()
 

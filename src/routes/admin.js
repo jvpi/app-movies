@@ -1,7 +1,7 @@
-const express = require('express')
-const router = express.Router()
-const controllerVista = require('../controllers/vistaAdmi.js')
-const controllerInsertar = require('../controllers/insertarSeries.js')
-router.get('/',controllerVista.renderVista)
-router.post('/',controllerInsertar.insertarSerie)
+const {Router} = require('express')
+const router = Router()
+const {renderVistaAdmi} = require('../controllers/vistaAdmi.js')
+const {insertarSerie} = require('../controllers/insertarSeries.js')
+router.get('/',renderVistaAdmi)
+router.post('/',insertarSerie)
 module.exports = router

@@ -30,15 +30,6 @@ body{
   
 }
 
-.header-input-search{
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 5px 0;
-  padding-left: 10px;
-  color: #131314;
-  border: none;
-  outline:none ;
-}
 .header-tittle{
   font-weight: bold;
   font-size: 1.4em;

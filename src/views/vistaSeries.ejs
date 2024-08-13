@@ -17,8 +17,9 @@
   <script type="module" defer src="/javascripts/validarBuscadorVistaSerie.js"></script>
   <link rel='stylesheet' href='/iconos/menu/style.css' />
   <link rel='stylesheet' href='/iconos/cross/style.css' />
-  <link rel='stylesheet' href='/iconos/video/style.css' />
+  <link rel='stylesheet' href='/iconos/circle-right/style.css' />
   <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
+    <link rel='stylesheet' href='/iconos/ctrl/style.css' />
 
 </head>
 <body id="body">
@@ -27,20 +28,20 @@
       <span class="icon-arrow-left2"></span>
     </div>
     <div class="enlace-inicio " id="enlace-inicio">
-
+      <span class="icon-menu icon-menu-desplegable" id="icon-menu-desplegable"></span>
        <a href="/" class="header-link">
-        <span class="icon-play3 icono-play-series"></span>
+        <!-- <span class="icon-play3 icono-play-series"></span> -->
         <span>Kamuai</span>
        </a>
     </div>
     <div class="menu-hamburguesa" id="menu-hamburguesa">
       <span class="icon-menu" id="icon-menu"></span>
-      <span class="icon-cross" id="icon-cross"></span>
+      
     </div>
     <div class="content-buscador " id="content-buscador">
       <div class="content-centrar">
         <form action="/resultado" id="form-vista-serie">
-          <input type="text" class="buscador" id="buscador-vista-serie">
+          <input type="text" class="buscador" autocomplete="off" placeholder="Buscar" id="buscador-vista-serie">
           <button class="boton-buscar boton-buscar-resposive " id="boton-buscar">
                 <span class="icon-search"></span>
           </button>
@@ -50,24 +51,48 @@
       
     </div>
   </header>
-  <nav class="nav" id="nav">
-  
-      <ul id="ul" class="acordeon ul">
-      <% for (var i = 0; i < series.length; i++) { %>
-             <li class="lista">
-                  <h1 class="h1 temporada">
-                    <span class="icon-video-camera icono-video-camera"></span>
-                     <%=`${series[i].temporada}`%>
-                  </h1>
-                   
-                    <% for (var j = 0; j < series[i].capitulos.length; j++) { %>
-                    <p class="capitulos"> <!-- contenido -->
+  <nav class="nav aparecer-menu" id="nav">
+      <div class="content-icon-menu-link">
+        <!-- <span class="icon-menu icon-menu-desplegable" id="icon-menu-hamburguesa"></span> -->
 
-                     <%=`${series[i].capitulos[j]}`%>
-                    </p>
-                    <%  } %>
-              </li>
-      <%  } %>
+       <a href="/" class="header-link">
+  
+        <span class='titulo-app'>Kamuai</span>
+       </a>
+       <div class='content-cross'>
+           <span class="icon-cross" id="icon-cross"></span>
+        </div>
+      
+      </div>
+      <ul id="ul" class="acordeon ul">
+          <% let i = 0 %>
+        
+           <% for (propiedad in series[0]) { %>
+              
+             <% if (Array.isArray(series[0][propiedad])) {%>
+               <%  i ++ %>
+                   <li class="lista">
+                    <h1 class="h1 temporada">
+
+                      <span class="icon-circle-right circle-right"></span>
+                       
+                      temporada<%=`${i}`%> 
+                    </h1>
+                   <% for (let temporada of series[0][propiedad]) { %>
+                     <p class="capitulo"> 
+                            <span class='icon-ctrl icon-ctrl-style'></span>
+                        <%=`${temporada}`%>
+                           </p>
+                 
+                    <%} %>
+                  </li>   
+     
+             <% }%>
+ 
+             
+          <%  } %>
+
+  
         
       </ul>
     </nav>
@@ -75,17 +100,18 @@
   <div class="centrar-content-video">
     
     <div class="content-video" id="content-video">
-     
+  
     </div>
   </div>
- <!-- class='btn-install' -->
+
   <div class='content-btn-intall ' id='content-btn-intall' >
         <button id="install_button" hidden  >
             <span class="icon-download3"></span> Instalar App
         </button>
   </div>
-  <div class="prueba">
-    
-  </div>
+
+<div style="color:black;">
+ 
+</div>
 </body>
 </html>

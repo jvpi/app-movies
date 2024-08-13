@@ -1,34 +1,47 @@
 const controller = {}
+const client = require('./db.js')
+const modeloSerie = require('../modelos/series.js')
 
-const series = [
-  {
-    nombre:'bojack horseman',
-    referencia:'../../series/bocjak/temo1/bocjak-1.mp4',
-    descripcion:'Comedia,drama',
-    temporada:'temporada1',
-    capitulos:['bocjak-1','capitulo 12']
-  },
-  {
-    nombre:'bojack horseman',
-    referencia:'../../series/bocjak/temo1/bocjak-1.mp4',
-    descripcion:'Comedia,drama',
-    temporada:'temporada2',
-    capitulos:['capitulo 1','capitulo 2']
-  },
-  {
-    nombre:'bojack horseman',
-    referencia:'../../series/bocjak/temo1/bocjak-1.mp4',
-    descripcion:'Comedia,drama',
-    temporada:'temporada2',
-    capitulos:['capitulo 1','capitulo 2']
+ console.log(modeloSerie())
+//   let i = 0
+// for (propiedad in series[0]) {
+
+//    if (Array.isArray(series[0][propiedad])) {
+
+//      i++
+//      console.log('temporada' + i)
+//       for (let temporada of series[0][propiedad]) {
+
+//             console.log( temporada)
+            
+//         }
+     
+//   }
+ 
+// }
+
+
+
+
+  //    
+controller.series = async function(req, res, next) {
+  try {
+    await client.connect()
+    const db = client.db('webseries')
+    const coleccion = db.collection('serie')
+    const series = await coleccion.find().toArray()
+   
+    res.render('vistaSeries',{series} );
+  } catch(e) {
+    
+    console.log(e);
+  } finally {
+     await client.close();
   }
 
-]
-
-controller.series = function(req, res, next) {
-  res.render('vistaSeries',{series} );
 }
 
 
+ 
 module.exports = controller;
 

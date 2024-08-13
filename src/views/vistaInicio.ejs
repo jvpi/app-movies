@@ -31,7 +31,7 @@
                   <a href="/" id="enlace-nombre-app"><h1 class="header-tittle">Kamuai</h1></a>
                </div>
               <form action="/resultado" method="get" class="form-resultado-incio" id="form-inicio">
-                  <input type="text" class="buscador vista-bsucador buscador-oculto" placeholder="Buscar" id="buscador">
+                  <input type="text" class="buscador vista-bsucador buscador-oculto" placeholder="Buscar" autocomplete="off" id="buscador">
                   <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
                       <span class="icon-search"></span>
                   </button>
@@ -63,11 +63,11 @@
           </div>
         </div>
         <div class="flex-slider">
-
+        
             <div class="content-slider">
-                <% for(let i = 0; i < rows.length; i++){ %>
+             <!--    <% for(let i = 0; i < rows.length; i++){ %>
                     <div class="card">  
-                    <a href=<%=`/series/rows[i].nombre `%> >
+                    <a href=<%=`/series/${rows[i].nombre} `%> >
                       <img src= <%=`imagenes/${rows[i].nombreimg} `%> alt="" class="img-bojack">
                       <div class="descripcion-movies">
                         <h1 class="card-tittle-movies"><%=rows[i].nombre %></h1>
@@ -75,7 +75,7 @@
                       </div>
                     </a>
                 </div>
-                <% } %>
+                <% } %> -->
             </div>
         </div>
         <img src="imagenes/mr-robots.webp" alt="" srcset="" class="img-header">
