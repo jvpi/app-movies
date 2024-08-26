@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script defer type='module' src="/javascripts/validarBuscadorVistaAdmi.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/vistaAdmi.css">
+    <!-- <link rel='stylesheet' href='/css/normalize.css' /> -->
+
+</head>
+<body id="body">
+
+  <h1>actualizar</h1>
+  <form action="/admin/eliminar" method="post" id="form">
+      <input type="text" name="" value= <%=`${result.nombreSerie}`%> >
+
+      <% let i = 0 %>
+             <% for (propiedad in result) { %>
+             <% if (Array.isArray(result[propiedad])) {%>
+               <%  i ++ %>
+                    <h1 class="h1 temporada">  
+                      temporada<%=`${i}`%> 
+                    </h1>
+                   <% for (let capitulo of result[propiedad]) { %>
+                    <input type="text" name="" value= <%=`${result.temporada1}`%> >
+                    <%} %>
+                   
+     
+             <% }%>
+ 
+             
+            <%  } %>
+
+
+      
+      <input type="text" name="" value= <%=`${result.nombreImg}`%> >
+      <textarea name=""  ><%=`${result.descripcion}`%></textarea>
+      <button>Enviar</button>
+  </form>
+</body>
+</html>

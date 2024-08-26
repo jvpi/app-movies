@@ -1,10 +1,15 @@
 const {Schema, model} = require('mongoose')
 
 const serieSchema = new Schema({
-	titulo:{
+	nombreSerie:{
 		type:String,
 		required: true,
     	unique: true
+	},
+	 temporada1:{
+		type: [String],
+		required: true,
+    	
 	},
 	nombreImg:{
 		type:String,
@@ -13,8 +18,7 @@ const serieSchema = new Schema({
 	},
 	descripcion:{
 		type:String,
-		required: true,
-    	unique: true
+		required: true
 	}
 },{timeStamp:true})
 

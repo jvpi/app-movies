@@ -60,7 +60,7 @@ img, picture, video, iframe, figure {
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a {
-  display: block;
+/*  display: block;*/
   text-decoration: none;
   color: inherit;
   font-size: inherit;
@@ -97,7 +97,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 /* Configuramos el texto que seleccionamos */
-::-moz-selection {
+/*::-moz-selection {
   background-color: var(--negro);
   color: var(--blanco);
 }
@@ -105,7 +105,7 @@ blockquote:before, blockquote:after, q:before, q:after {
   background-color: var(--negro);
   color: var(--blanco);
 }
-
+*/
 /* Nivelamos problemas de tipografías y colocación de formularios  */
 form, input, textarea, select, button, label {
   font-family: inherit;
@@ -119,7 +119,7 @@ form, input, textarea, select, button, label {
   /* opcional */
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none;
+          appearance: none;*
 }
 
 /* Reseteamos las tablas */

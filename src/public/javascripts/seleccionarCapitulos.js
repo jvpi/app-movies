@@ -4,6 +4,7 @@ const btnTemporada = document.querySelectorAll('.temporada')
 let temporada = ''
 let nav = document.getElementById('nav')
 let iconoMenu = document.getElementById('icon-menu')
+
 function nombreSerie() {
 	let pathArray = window.location.pathname.split('/')
 	let result = pathArray.filter(function (elemento) {

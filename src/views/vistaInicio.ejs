@@ -65,17 +65,27 @@
         <div class="flex-slider">
         
             <div class="content-slider">
-             <!--    <% for(let i = 0; i < rows.length; i++){ %>
-                    <div class="card">  
-                    <a href=<%=`/series/${rows[i].nombre} `%> >
-                      <img src= <%=`imagenes/${rows[i].nombreimg} `%> alt="" class="img-bojack">
-                      <div class="descripcion-movies">
-                        <h1 class="card-tittle-movies"><%=rows[i].nombre %></h1>
-                        <p class="card-descripcion-movies"><%=rows[i].descripcion %></p>
+            
+                <%  if (series.length > 0) { %>
+                      <% for(let i = 0; i < series.length; i++){ %>
+                      <div class="card">  
+                        <a href=<%=`/series/${series[i].nombreSerie} `%> >
+                          <img src= <%=`imagenes/${series[i].nombreImg} `%> alt="" class="img-bojack">
+                          <div class="descripcion-movies">
+                            <h1 class="card-tittle-movies"><%=series[i].nombreSerie %></h1>
+                            <p class="card-descripcion-movies"><%=series[i].descripcion %></p>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                </div>
-                <% } %> -->
+                  <% } %> 
+                 <% } else { %>
+                    <div class="card">  
+                       
+                    </div>
+                 <% } %>
+
+                  
+             
             </div>
         </div>
         <img src="imagenes/mr-robots.webp" alt="" srcset="" class="img-header">

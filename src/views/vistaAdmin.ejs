@@ -6,19 +6,77 @@
 
     <title>Document</title>
     <script defer type='module' src="/javascripts/validarBuscadorVistaAdmi.js"></script>
+    <script type="module" defer src="/javascripts/vistaAdmi.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/vistaAdmi.css">
+    <link rel='stylesheet' href='/css/normalize.css' />
+
 </head>
 <body id="body">
-   
-    <h1>vista admin</h1>
-    <form action="/admin/" method="post" id="form-admin">
-        <input type="text" name="nombreSerie" placeholder="titulo serie">
-          <input type="text" name="tituloVideo" placeholder="titulo video">
-        <input type="text" name="nombreImg" placeholder="titulo img" id="nombre-img">
-        <input type="text" name="descripcion" placeholder="descripcion">
-        <input type="text" name="temporada" placeholder='temporada'>
-        <button>Enviar</button>
-
-          
-    </form>
+    <section class='section'>
+        <div class='content-input'>
+            <input type="text" class="input" name="" id="input" placeholder="Buscar serie">
+        </div>
+         <div class='content-form'>
+            <div class="content-h1">
+                <h1 class="h1" id="h1">Almacenar nueva serie</h1>
+            </div>
+                
+                <form action="/admin/" method="post" id="form-admin" class="form-admin">
+                    <input type="text" class="input input-margin border" name="nombreSerie" placeholder="nombre Serie" id="tituloSerie">
+                    <input type="text" class="input input-margin border" name="nombreCapitulo" placeholder="nombre Capitulo" id="tituloVideo">
+                    <input type="text" class="input input-margin border" name="nombreImg" placeholder="nombre img" id="nombreImg">
+                    <textarea class="textarea border" rows="10" cols="50" name="descripcion" placeholder="descripcion" id="descripcion" ></textarea> 
+                   
+                    <button class="btn">Enviar</button>
+                </form>
+           </div>
+        <div  class="flex">
+            <nav class="nav"></nav>
+            <div class="content-article">
+                <%  if (series.length > 0) { %>
+                    <% for(let i = 0; i < series.length; i++){ %>
+                      <article class="article">
+                          <div>
+                            <!-- <a href="">titulo</a> -->
+                            <h1 class="titulo"><%=`${series[i].nombreSerie} `%></h1>
+                           </div>
+                            <div>
+                            <a class="botom actualizar" href= <%= `/admin/actualizar/${series[i]._id}` %> > Actualizar</a>
+                                <a href="" class="botom eliminar">Eliminar</a>
+                                <a href="" class="botom nueva-temporada">Agregar nueva temporada</a>
+                            </div>
+                      </article>
+                    <% } %> 
+                <% } else { %> 
+                    <div class="card">  
+                    </div>
+                <% } %>    
+                  <a href=""></a>
+                 
+                
+            </div>
+           
+        </div>
+        
+        <!--   <nav class='nav'>
+              <ul>
+                <%  if (series.length > 0) { %>
+                    <% for(let i = 0; i < series.length; i++){ %>
+                      <li class='li'><%=`${series[i].nombreSerie} `%></li>
+                      <span><%=`${series[i]._id} `%></span>
+                    <% } %> 
+                 <% } else { %>
+                    <div class="card">  
+                       
+                    </div>
+                 <% } %>    
+                
+              </ul>
+             
+          </nav>
+           -->
+    
+    </section>
+  
 </body>
 </html>

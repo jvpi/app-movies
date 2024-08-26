@@ -1,13 +1,24 @@
-//const pool = require('./db.js')
+const db = require('./db.js')
 const controller = {}
-
+const serieModel = require('../modelos/series.js')
 controller.insertarSerie = async function(req,res) {
-	console.log(req.body)
-	// const {nombreSerie,nombreImg,extensionVideo,descripcion,temporada} = req.body
-	// const sentencia =  'insert into serie (nombre,descripcion,nombreimg,temporadas) VALUES($1, $2, $3,$4,$5)'
-	// const valores = [nombreSerie,extensionVideo,descripcion,temporada,nombreImg]
-	// const insertar = await pool.query(sentencia,valores)
-	res.redirect('/admin')
+	try {
+		const {nombreSerie,nombreCapitulo,nombreImg,descripcion} = req.body
+		const newSerie = new serieModel({
+				nombreSerie:nombreSerie,
+				temporada1:nombreCapitulo,
+				nombreImg:nombreImg,
+				descripcion:descripcion
+			})
+		const result = await newSerie.save()
+		res.redirect('/admin')
+	} catch(e) {
+		res.redirect('/admin')
+		console.log(e)
+	} finally {
+	}
+
 }
+
 
 module.exports = controller

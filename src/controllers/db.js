@@ -10,10 +10,18 @@
 // })
 require('dotenv').config()
 
-const {MongoClient}  = require('mongodb')
-const uri = process.env.URI
-const client = new MongoClient(uri)
-module.exports = client
+const mongoose = require('mongoose')
+const {URI} = process.env
+
+async function  db () {
+	const result = await mongoose.connect(URI);
+	console.log('conectado')
+}
+db ()
+// const {MongoClient}  = require('mongodb')
+// 
+// const client = new MongoClient(uri)
+// module.exports = client
 // javaScript
 // const { Client } = require('pg');
 
