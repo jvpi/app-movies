@@ -19,7 +19,11 @@ const serieSchema = new Schema({
 	descripcion:{
 		type:String,
 		required: true
-	}
+	},
+	// plataforma:{
+	// 	type:String,
+	// 	required: true
+	// }
 },{timeStamp:true})
 
 module.exports =  model('serie',serieSchema)

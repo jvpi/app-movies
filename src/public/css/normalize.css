@@ -110,16 +110,16 @@ blockquote:before, blockquote:after, q:before, q:after {
 form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
-  -webkit-hyphens: auto;
+/*  -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  background-color: transparent;
-  color: inherit;
+*/  /*background-color: transparent;
+  color: inherit;*/
  /* display: block;*/
   /* opcional */
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none;*
+          appearance: none;*/
 }
 
 /* Reseteamos las tablas */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script defer type='module' src="/javascripts/validarBuscadorVistaAdmi.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/vistaAdmi.css">
+    <link rel='stylesheet' href='/css/normalize.css' />
+
+</head>
+<body id="body" class="body-edit">
+  <div class="flex-edit">
+    <div class="a"></div>
+      <nav class="nav-edit-serie">
+    
+      </nav>
+      <div class="content-edit">
+        <header class="header">
+          
+        </header>
+        <div class="content-tarjetas">
+          <div class="tarjetas">
+           <span>Temporadas</span>
+          </div>
+          <div class="tarjetas">
+            <span>Descripcion</span>
+          </div>
+        </div>
+        <div class="content-resultados">
+          <div class="resultados"></div>
+        </div>
+
+      </div>
+  </div>
+
+   
+ <!--  <div class='content-form'>
+    <div class="content-h1-actualizar">
+      <h1 class="h1-actualizar">Actualizar</h1>
+    </div>
+    <form  method="post" id="form" class="form-actualizar" action=<%= `/admin/editarSerie/${result.id}` %>>
+      <input type="text" name="nombreSerie" class="input input-actualizar" value= <%=`${result.nombreSerie}`%> >
+
+      <% let i = 0 %>
+             <% for (propiedad in result) { %>
+             <% if (Array.isArray(result[propiedad])) {%>
+               <%  i ++ %>
+                    <h1 class="h1 temporada">  
+                      temporada<%=`${i}`%> 
+                    </h1>
+                   <% for (let capitulo of result[propiedad]) { %>
+                    <input type="text" name="nombreCapitulo" class="input input-actualizar" value= <%=`${result.temporada1}`%> >
+                    <%} %>
+                   
+     
+             <% }%>
+ 
+             
+            <%  } %>
+
+
+      
+      <input type="text" class="input input-actualizar" name="nombreImg" value= <%=`${result.nombreImg}`%> >
+      <textarea name="descripcion" class="textarea border" rows="10" cols="50"  ><%=`${result.descripcion}`%></textarea>
+      <button class="btn">Enviar</button>
+  </form>
+  </div> -->
+  
+</body>
+</html>

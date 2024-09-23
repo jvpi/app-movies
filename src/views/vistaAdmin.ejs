@@ -41,9 +41,9 @@
                             <h1 class="titulo"><%=`${series[i].nombreSerie} `%></h1>
                            </div>
                             <div>
-                            <a class="botom actualizar" href= <%= `/admin/actualizar/${series[i]._id}` %> > Actualizar</a>
-                                <a href="" class="botom eliminar">Eliminar</a>
-                                <a href="" class="botom nueva-temporada">Agregar nueva temporada</a>
+                            <a class="botom actualizar" href= <%= `/admin/renderEditForm/${series[i]._id}` %> > Actualizar</a>
+                            <a class="botom eliminar" href= <%= `/admin/eliminarSerie/${series[i]._id}` %> >Eliminar</a>
+                                <a href="/admin/agregar-temporada" class="botom nueva-temporada">Administrar  temporadas</a>
                             </div>
                       </article>
                     <% } %> 
@@ -80,3 +80,6 @@
   
 </body>
 </html>
+
+
+
