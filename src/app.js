@@ -9,7 +9,7 @@ const routerSeries = require('./routes/index');
 var usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin.js')
 const app = express();
-
+app.disable('x-powered-by')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -26,7 +26,6 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')),
 // express.static(path.join(__dirname)));
 let directoioPadre = path.dirname(__dirname)
-console.log(directoioPadre)
 app.use(express.static(directoioPadre))
 app.use(express.static(path.join(__dirname, 'public')))
 

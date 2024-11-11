@@ -1,0 +1,111 @@
+body{
+
+}
+.header{
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: 50px;
+	column-gap: 10px;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+}
+.header div {
+	
+/*	padding: 15px 20px;*/
+	transition: .2s ease ;
+	
+}
+
+.header div:hover {
+	margin-bottom: 5px;
+}
+
+.agregar-temporada{
+	background: #F09319;
+	padding: 17px 10px;
+	cursor: pointer;
+
+}
+
+.eliminar-capitulo{
+	background: #F95454;
+	padding: 17px 10px;
+	cursor: pointer;
+}
+.agregar-capitulo{
+	background: #0D92F4;
+	padding: 17px 10px;
+	cursor: pointer;
+}
+
+/*tabla*/
+
+.section{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 60% 22%;
+	gap: 10%;
+}
+
+.tabla{
+	background: red;
+}
+
+.cabecera{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+table {
+  border:1px solid #C8C8C8;
+  border-radius: 5px;
+
+}
+th{
+	text-align: left;
+	color: #C8C8C8;
+	font-size: 0.9em;
+	padding: 15px 0;
+}
+td{
+	border-bottom: 1px solid #C8C8C8;
+	padding: 15px 0;
+	font-weight: 700;
+		font-size: 0.9em;
+		color: #919191;
+}
+.border{
+	border-top:1px solid #C8C8C8 ;
+	margin-top: 15px;
+}
+.encabezado{
+	background: #f6f9fc;
+	 border-radius: 5px;
+}
+
+
+/*form*/
+
+.content-form{
+	background: #1A1A1D;
+	border-radius:10px ;
+	padding: 15px 15px;
+
+}
+.form-capitulos input{
+	width: 90%;
+	border-radius: 5px;
+	padding: 6px;
+	margin-bottom: 20px;
+	background-color: ;
+}
+
+.btn-capitulo{
+	background-color:#F09319 ;
+	padding: 7px;
+	border-radius: 10px;
+	width: 92px;
+}

@@ -139,25 +139,6 @@
 	font-weight: 600;
 }
 
-.form-nueva-temporada{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 50%;
-}
-.input-nueva-temporada{
-	margin: 15px 0;
-	width: 100%;
-	/*border-radius: 10px;
-	border: 1px solid gray;
-	padding: 5px 10px;*/
-}
-.btn-nueva-temporada{
-	width: 50%;
-	color: #fff;
-	padding: 10px;
-	margin-bottom: 15px;
-}
 
 /*vista actualizar*/
 
@@ -167,7 +148,7 @@
 }
 .nav-edit-serie{
 	width: 20%;
-	background-color: red;
+	
 	height: 100vh;
 }
 
@@ -202,15 +183,30 @@
 .content-resultados{
 	display: flex;
 	justify-content: center;
+	
+/*	padding: 20px 0;*/
 }
-.resultados{
+.contet-info-temporadas{
 	width: 89%;
 	color: #000;
 	border-radius:5px ;
 	background-color: #fff;
-	height: 400px;
+/*	height: 180px;*/
 	margin-right: 15px;
-	
+	padding: 40px 0;
+
+}
+.content-flex-info-temporadas{
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+.width{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
 }
 .flex-edit{
 	display: flex;
@@ -239,9 +235,28 @@
 	position: relative;
 	flex-direction: column;
 	align-items: center;
-background-color: red;
-	
+
 }
+.form-nueva-temporada{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+.input-nueva-temporada{
+	margin: 15px 0;
+	width: 100%;
+	/*border-radius: 10px;
+	border: 1px solid gray;
+	padding: 5px 10px;*/
+}
+.btn-nueva-temporada{
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
 .content-h1-actualizar{
 	
 	width: 50%;

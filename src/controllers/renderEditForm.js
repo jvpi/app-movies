@@ -4,21 +4,9 @@ controller.renderEditForm = async function (req,res) {
 	const {id} = req.params
 	try {
 		const result = await modeloSerie.findById(id)
-		const objClone = {...result}
-		const objSerieClone = {...objClone._doc}
-//console.log(result.id)
-		for (propiedad in objSerieClone) {
-			
-			if (Array.isArray(objSerieClone[propiedad] )) {
-				// console.log(objSerieClone[propiedad] )
-			}
-			
-		}
-	// const result = await serieModel.updateOne(
-	// 	{nombreSerie:"rick and morty"},
-	// 	{$push:{temporada1:'capitulo2'}}  <!--  --
-	// )
-		res.render('renderEditForm',{result})
+		let  cantidadTemporadas = procesarTemporadas(result)
+		console.log(cantidadTemporadas)
+		res.render('renderEditForm',{result,cantidadTemporadas})
 	} catch(e) {
 		// statements
 		console.log(e);
@@ -26,4 +14,14 @@ controller.renderEditForm = async function (req,res) {
 	
 
 }
+function procesarTemporadas (result) {
+	
+	let propiedades = Object.keys(result._doc)
+	const r = propiedades.filter(function (elemento) {
+		return elemento.includes('temporada')
+
+	})
+	return r
+}                
+
 module.exports = controller

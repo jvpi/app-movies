@@ -1,13 +1,4 @@
-// const {Pool} = require('pg')
 
-//   const pool = new Pool({
-// 	user:'postgres',
-// 	host:'localhost',
-// 	password: "123456",
-// 	port:"5432",
-// 	database:"series" 
-
-// })
 require('dotenv').config()
 
 const mongoose = require('mongoose')
@@ -15,9 +6,9 @@ const {URI} = process.env
 
 async function  db () {
 	const result = await mongoose.connect(URI);
-	console.log('conectado')
+	
 }
-db ()
+db ()  
 // const {MongoClient}  = require('mongodb')
 // 
 // const client = new MongoClient(uri)

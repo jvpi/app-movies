@@ -1,14 +1,14 @@
 const formAdmi = document.getElementById('form-admin')
 const validarFomr = {}
-formAdmi.addEventListener('submit', function (e) {
-	e.preventDefault()
-	validarInputTituloSerie () 
-	validarInputTituloVideo ()
-	 validarInputTituloImg ()
-	 validarInputDescripcion ()
-	 validarForm (this)
+// formAdmi.addEventListener('submit', function (e) {
+// 	e.preventDefault()
+// 	validarInputTituloSerie () 
+// 	validarInputTituloVideo ()
+// 	 validarInputTituloImg ()
+// 	 validarInputDescripcion ()
+// 	 validarForm (this)
 	 
-})
+// })
 function validarForm (that) {
 	if (validarFomrObj()) {
 	 	that.submit()

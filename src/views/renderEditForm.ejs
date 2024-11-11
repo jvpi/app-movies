@@ -6,67 +6,89 @@
 
     <title>Document</title>
     <script defer type='module' src="/javascripts/validarBuscadorVistaAdmi.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/vistaAdmi.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/vistaActualizar.css">
     <link rel='stylesheet' href='/css/normalize.css' />
 
 </head>
 <body id="body" class="body-edit">
-  <div class="flex-edit">
-    <div class="a"></div>
-      <nav class="nav-edit-serie">
-    
-      </nav>
-      <div class="content-edit">
-        <header class="header">
-          
-        </header>
-        <div class="content-tarjetas">
-          <div class="tarjetas">
-           <span>Temporadas</span>
-          </div>
-          <div class="tarjetas">
-            <span>Descripcion</span>
-          </div>
-        </div>
-        <div class="content-resultados">
-          <div class="resultados"></div>
-        </div>
-
+  <header class="header">
+    <form action=<%= `/admin/agregar-temporada/${result.id}/cadena/nueva-temporada` %> >
+      <div>
+         <button class="agregar-temporada">Crear nueva temporada</button>
       </div>
-  </div>
+       
+    </form>
 
-   
- <!--  <div class='content-form'>
-    <div class="content-h1-actualizar">
-      <h1 class="h1-actualizar">Actualizar</h1>
+    <form action=<%= `/admin/agregar-temporada/${result.id}/cadena/eliminar-capitulo` %> >
+      <div>
+         <button class="eliminar-capitulo">Eliminar capitulo</button>
     </div>
-    <form  method="post" id="form" class="form-actualizar" action=<%= `/admin/editarSerie/${result.id}` %>>
-      <input type="text" name="nombreSerie" class="input input-actualizar" value= <%=`${result.nombreSerie}`%> >
+       
+    </form>
+      <form  >
+      <div>
+         <button class="agregar-capitulo">Agregar capitulo</button>
+    </div>
+       
+    </form>
+   
+  </header>
+   
+  <section class="section">
+    <table class="table">
+      <tr class="encabezado">
+        <th>temporadas</th>
+        <th>capitulos</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+       <% for (let temporada  of cantidadTemporadas) { %>
+          <tr>
+            <td class="border"><%= temporada %></td>
+          </tr>
+       <%} %>
+    <!--   <tr>
+        <td class="border">temporada1</td>
+        <td class="border">capitulo1</td>
+        <td class="border">capitulo2</td>
+        <td class="border">capitulo3</td>
+        <td class="border">capitulo4</td>
+        <td class="border">capitulo5</td>
+        <td class="border">capitulo6</td>
+       
+      </tr>
+      <tr>
+        <td>temporada2</td>
+        <td>capitulo1</td>
+        <td>capitulo2</td>
+        <td>capitulo3</td>
+        <td>capitulo4</td>
+        <td>capitulo5</td>
+        <td>capitulo6</td>
+      </tr> -->
+    </table>
+    <div class="content-form">
+      <form action=<%= `/admin/agregar-temporada/${result.id}/cadena/agregar-capitulo` %> class="form-capitulos">
+        <input type="text" name="temporada" placeholder="temporada" disabled>
+        <input type="text" name="capitulo" placeholder="capitulo">
+        <div>
+           <button class="btn-capitulo">Enviar</button>
+        </div>
+       
+      </form>
+    </div>
+  </section>
 
-      <% let i = 0 %>
-             <% for (propiedad in result) { %>
-             <% if (Array.isArray(result[propiedad])) {%>
-               <%  i ++ %>
-                    <h1 class="h1 temporada">  
-                      temporada<%=`${i}`%> 
-                    </h1>
-                   <% for (let capitulo of result[propiedad]) { %>
-                    <input type="text" name="nombreCapitulo" class="input input-actualizar" value= <%=`${result.temporada1}`%> >
-                    <%} %>
-                   
-     
-             <% }%>
- 
-             
-            <%  } %>
-
-
-      
-      <input type="text" class="input input-actualizar" name="nombreImg" value= <%=`${result.nombreImg}`%> >
-      <textarea name="descripcion" class="textarea border" rows="10" cols="50"  ><%=`${result.descripcion}`%></textarea>
-      <button class="btn">Enviar</button>
-  </form>
-  </div> -->
   
 </body>
 </html>
+
+<!--  <tr>
+          <td class="border"></td>
+        <td class="border">capitulo2</td>
+         <td class="border">capitulo1</td>
+          <td class="border">capitulo1</td>
+        </tr> -->

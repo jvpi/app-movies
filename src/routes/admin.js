@@ -10,6 +10,6 @@ router.get('/',renderVistaAdmi)
 router.post('/',insertarSerie)
 router.get('/renderEditForm/:id',renderEditForm)
 router.post('/editarSerie/:id',editar)
-router.get('/agregar-temporada',nuevaTemporada)
+router.all('/agregar-temporada/:id/cadena/:string',nuevaTemporada)
 router.get('/eliminarSerie/:id',eliminarSerie)
 module.exports = router
