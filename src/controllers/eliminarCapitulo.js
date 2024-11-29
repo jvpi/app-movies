@@ -5,17 +5,18 @@ require('dotenv').config()
 const {URI} = process.env
 const client = new MongoClient(URI)
 
-controller.eliminarCapitulos = async function (capitulo,id) {
+controller.eliminarCapitulos = async function (capitulo,id,temporada) {
 	try {
+		console.log(capitulo,id,temporada)
 		const conexion = await client.connect()
 		const baseDeDatos = await client.db('series')
 		const coleccion = await baseDeDatos.collection('series')
-		const result1 = await modeloSerie.findById(id)
-		const nombreSeries = result1.nombreSerie
+		const result = await modeloSerie.findById(id)
+		const nombreSeries = result.nombreSerie
 		
-		const result = await coleccion. updateOne(
+		const eliminarCapitulo = await coleccion. updateOne(
 		  {"nombreSerie": nombreSeries } ,
-		{ $pull: { temporada2:  [ 'programar5' ] } }
+		  { $pull: { [temporada]:  capitulo } }
 		//   //
 		//   //{ $push: { [t]: p } }
 		  //    { $set: { "temporada1.1": "" } }

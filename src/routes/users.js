@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const {renderFormRegistro,registro} = require('../controllers/renderFormRegistro.js')
+const {renderFormLogin,login} = require('../controllers/renderFormLogin.js')
 
-/* GET users listing. */
-router.get('/mensaje', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/registro', renderFormRegistro);
+router.get('/login',renderFormLogin)
+router.post('/login',login)
+router.post('/registro', registro);
 
 module.exports = router;

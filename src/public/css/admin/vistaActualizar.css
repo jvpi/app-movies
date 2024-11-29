@@ -1,5 +1,5 @@
 body{
-
+	background-color: #E4E0E1;
 }
 .header{
 	display: grid;
@@ -45,14 +45,14 @@ body{
 
 .section{
 	width: 100%;
-	display: grid;
+	display:flex;
+	justify-content: space-around;
+	/*display: grid;
 	grid-template-columns: 60% 22%;
-	gap: 10%;
+	gap: 10%;*/
 }
 
-.tabla{
-	background: red;
-}
+
 
 .cabecera{
 	display: grid;
@@ -60,25 +60,28 @@ body{
 }
 
 table {
-  border:1px solid #C8C8C8;
+/*  border:1px solid #C8C8C8;*/
   border-radius: 5px;
-
+  width: 60%;
+  background: #fff;
+  overflow: hidden;
+  padding: 15px;
 }
 th{
 	text-align: left;
 	color: #C8C8C8;
 	font-size: 0.9em;
-	padding: 15px 0;
+	padding: 15px 10px;
 }
 td{
-	border-bottom: 1px solid #C8C8C8;
-	padding: 15px 0;
+/*	border-bottom: 1px solid #C8C8C8;*/
+	padding: 15px 10px;
 	font-weight: 700;
 		font-size: 0.9em;
 		color: #919191;
 }
 .border{
-	border-top:1px solid #C8C8C8 ;
+/*	border-top:1px solid #C8C8C8 ;*/
 	margin-top: 15px;
 }
 .encabezado{
@@ -88,11 +91,24 @@ td{
 
 
 /*form*/
-
+.ocultar{
+	height:0px;
+	background: #1A1A1D;
+	overflow: hidden;
+	display: none;
+}
 .content-form{
 	background: #1A1A1D;
 	border-radius:10px ;
+	height: 210px;
+	overflow: hidden;
+	display: block;
+}
+
+.paddin-form{
 	padding: 15px 15px;
+
+	
 
 }
 .form-capitulos input{
@@ -100,7 +116,7 @@ td{
 	border-radius: 5px;
 	padding: 6px;
 	margin-bottom: 20px;
-	background-color: ;
+color: black;
 }
 
 .btn-capitulo{
@@ -108,4 +124,25 @@ td{
 	padding: 7px;
 	border-radius: 10px;
 	width: 92px;
+}
+.descripcion-form{
+	background-color:#F09319  ;
+	padding: 10px 15px;
+/*	text-align: center;*/
+display: flex;
+justify-content: space-between;
+
+
+}
+
+.icon-cerrar{
+	font-weight: 500;
+	font-size: 1.5em;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+/*form eliminar capitulo*/
+.red{
+	background: #F95454;
 }

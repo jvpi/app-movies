@@ -1,0 +1,79 @@
+.content-form{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: -webkit-linear-gradient(90deg, #222120,#312e26,#45423a);
+}
+.content-msg{
+	width: 50%;
+	background: #EF7676;
+	margin-bottom: 50px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: #8B3333;
+	border: 1px solid #EA5B5B;
+}
+.form{
+	background: #1A1A19;
+	display: flex;
+	padding: 30px 5px;
+	width: 25%;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 3px;
+}
+.content-input{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 80%;
+	height: 100%;
+	
+}
+.content-input input:nth-child(1){
+	margin-bottom: 25px;
+}
+.content-input input:nth-child(3){
+	margin-top: 25px;
+}
+.input{
+	width: 100%;
+	padding: 10px 5px;
+	background: #383837;
+	border-radius: 3px;
+	color: #fff;
+}
+.h2{
+	font-weight: 500;
+}
+.h2:first-letter{
+	text-transform: uppercase;
+}
+.btn{
+	margin-top: 40px;
+	width: 80%;
+	padding: 8px 0;
+	cursor: pointer;
+	border-radius: 3px;
+	font-weight: 600;
+}
+
+.logo{
+	width: 40%;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+
+.h2-msn-error{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.cerrar-mesanje{
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 1.3em;
+}

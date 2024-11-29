@@ -1,0 +1,16 @@
+	
+	<% if(error_msg.length > 0){ %>
+			<div class="content-msg" >
+				 <h2 class="h2"> <%=error_msg%> </h2>
+			</div>
+		<% } %>	
+		<% if(typeof errores != 'undefined'){ %>
+			<div class="content-msg">
+				<% for (msnErrro of errores) { %>
+				 	<h2 class="h2"> <%=`${msnErrro.text}`%> </h2>
+				<% }%>
+			</div>
+		<% } %>	
+
+		
+

@@ -1,14 +1,20 @@
-
 require('dotenv').config()
-
 const mongoose = require('mongoose')
-const {URI} = process.env
+
+const {SERIES_MONGODB_HOST,SERIES_MONGODB_DATABASE,USUARIOS_MONGODB_DATABASE} = process.env
+const MONGODB_URI_SERIES = `mongodb://${SERIES_MONGODB_HOST}/${SERIES_MONGODB_DATABASE}`
+const MONGODB_URI_USUARIOS = `mongodb://${SERIES_MONGODB_HOST}/${USUARIOS_MONGODB_DATABASE}`
 
 async function  db () {
-	const result = await mongoose.connect(URI);
-	
+	const result = await mongoose.connect(MONGODB_URI_SERIES);
+	//const result2 = await mongoose.connect(MONGODB_URI_USUARIOS);
 }
-db ()  
+//db ()  
+
+// async function  db2 () {
+// 	const result = await mongoose.connect(MONGODB_URI_USUARIOS);
+// }
+// db2 ()  
 // const {MongoClient}  = require('mongodb')
 // 
 // const client = new MongoClient(uri)

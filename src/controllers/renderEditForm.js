@@ -5,13 +5,16 @@ controller.renderEditForm = async function (req,res) {
 	try {
 		const result = await modeloSerie.findById(id)
 		let  cantidadTemporadas = procesarTemporadas(result)
-		console.log(cantidadTemporadas)
-		res.render('renderEditForm',{result,cantidadTemporadas})
+		let capitulos  = Object.values(result._doc).filter(function (elemento) {
+			return Array.isArray(elemento) 	
+		})
+		console.log(result)
+		res.render('renderEditForm',{result,capitulos})
 	} catch(e) {
 		// statements
 		console.log(e);
 	}
-	
+
 
 }
 function procesarTemporadas (result) {

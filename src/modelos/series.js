@@ -1,4 +1,10 @@
 const {Schema, model} = require('mongoose')
+const mongoose = require('mongoose');
+require('dotenv').config()
+
+const {SERIES_MONGODB_HOST,SERIES_MONGODB_DATABASE} = process.env
+const MONGODB_URI_SERIES = `mongodb://${SERIES_MONGODB_HOST}/${SERIES_MONGODB_DATABASE}`
+const db1 = mongoose.createConnection(MONGODB_URI_SERIES);
 
 const serieSchema = new Schema({
 	nombreSerie:{
@@ -27,4 +33,4 @@ const serieSchema = new Schema({
 },{timeStamp:true})
 
 
-module.exports =  model('series',serieSchema)
+module.exports =  db1.model('series',serieSchema)

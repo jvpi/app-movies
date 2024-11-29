@@ -8,7 +8,7 @@
     <script defer type='module' src="/javascripts/validarBuscadorVistaAdmi.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/admin/vistaActualizar.css">
     <link rel='stylesheet' href='/css/normalize.css' />
-
+    <script defer src="/javascripts/formCapitulosTemporadas.js"></script>
 </head>
 <body id="body" class="body-edit">
   <header class="header">
@@ -18,24 +18,17 @@
       </div>
        
     </form>
-
-    <form action=<%= `/admin/agregar-temporada/${result.id}/cadena/eliminar-capitulo` %> >
-      <div>
-         <button class="eliminar-capitulo">Eliminar capitulo</button>
+    <div>
+         <button id="eliminar-capitulo" class="eliminar-capitulo">Eliminar capitulo</button>
     </div>
-       
-    </form>
-      <form  >
-      <div>
-         <button class="agregar-capitulo">Agregar capitulo</button>
+    <div>
+         <button id="agregar-capitulo" class="agregar-capitulo" >Agregar capitulo</button>
     </div>
-       
-    </form>
-   
+  
   </header>
    
   <section class="section">
-    <table class="table">
+    <table class="table" id="table">
       <tr class="encabezado">
         <th>temporadas</th>
         <th>capitulos</th>
@@ -45,38 +38,46 @@
         <th></th>
         <th></th>
       </tr>
-       <% for (let temporada  of cantidadTemporadas) { %>
+       <% for (let i = 0; i < capitulos.length; i++) { %>
           <tr>
-            <td class="border"><%= temporada %></td>
+            <td class="border temporada">temporada<%= i+1 %></td>
+             <% for (let j = 0; j < capitulos[i].length; j++) { %>
+              <td class="border capitulo"><%= capitulos[i][j] %></td>
+             <%} %> 
           </tr>
-       <%} %>
-    <!--   <tr>
-        <td class="border">temporada1</td>
-        <td class="border">capitulo1</td>
-        <td class="border">capitulo2</td>
-        <td class="border">capitulo3</td>
-        <td class="border">capitulo4</td>
-        <td class="border">capitulo5</td>
-        <td class="border">capitulo6</td>
-       
-      </tr>
-      <tr>
-        <td>temporada2</td>
-        <td>capitulo1</td>
-        <td>capitulo2</td>
-        <td>capitulo3</td>
-        <td>capitulo4</td>
-        <td>capitulo5</td>
-        <td>capitulo6</td>
-      </tr> -->
+       <%} %>  
     </table>
-    <div class="content-form">
-      <form action=<%= `/admin/agregar-temporada/${result.id}/cadena/agregar-capitulo` %> class="form-capitulos">
+    <div class="ocultar" id="content-form">
+      <form id='formAgregarCapitulos' method="post" action=<%= `/admin/agregar-temporada/${result.id}/cadena/agregar-capitulo`%> class="form-capitulos">
+        <div class="descripcion-form">
+          <span>Agragar capitulo</span>
+          <span class="icon-cerrar" id="icon-cerrar">x</span>
+        </div>
+        <div class="paddin-form">
         <input type="text" name="temporada" placeholder="temporada" disabled>
         <input type="text" name="capitulo" placeholder="capitulo">
         <div>
            <button class="btn-capitulo">Enviar</button>
         </div>
+        </div>
+       
+       
+      </form>
+    </div>
+       <div class="ocultar" id="content-form-eliminar-capitulo">
+      <form id='formEliminarCapitulos' method="post" action=<%= `/admin/agregar-temporada/${result.id}/cadena/eliminar-capitulo`%> class="form-capitulos">
+        <div class="descripcion-form red">
+          <span>Eliminar capitulo</span>
+          <span class="icon-cerrar" id="icon-cerrar-form-eliminar">x</span>
+        </div>
+        <div class="paddin-form">
+        <input type="text" name="temporada" placeholder="temporada" disabled>
+        <input type="text" name="capitulo" placeholder="capitulo">
+        <div>
+           <button class="btn-capitulo red">Enviar</button>
+        </div>
+        </div>
+       
        
       </form>
     </div>
@@ -85,10 +86,3 @@
   
 </body>
 </html>
-
-<!--  <tr>
-          <td class="border"></td>
-        <td class="border">capitulo2</td>
-         <td class="border">capitulo1</td>
-          <td class="border">capitulo1</td>
-        </tr> -->

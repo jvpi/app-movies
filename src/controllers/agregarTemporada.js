@@ -7,28 +7,30 @@ const modeloSerie = require('../modelos/series.js')
 const {agragarCapitulos} = require('./agregarCapotulos.js')
 const {eliminarCapitulos} = require('./eliminarCapitulo.js')
 controller.nuevaTemporada = async function (req,res) {
-	const {primerCapitulo,capitulo} = req.body
+	const {primerCapitulo,capitulo,temporada} = req.body
  	const {id,string} = req.params
- 
  	if (string == 'agregar-capitulo') {
- 		//agragarCapitulos(capitulo,id)
- 		console.log(string)
+ 		agragarCapitulos(capitulo,id,temporada)
+ 		res.redirect(`/admin/renderEditForm/${id}`)
+ 		return
  	}
  	if (string == 'eliminar-capitulo') {
- 		//eliminarCapitulos(capitulo,id)
- 		console.log(string)
+ 		eliminarCapitulos(capitulo,id,temporada)
+ 		res.redirect(`/admin/renderEditForm/${id}`)
+ 		return
  	}
  	
  	if (string == 'nueva-temporada') {
  		
  		try{
-		const conexion = await client.connect()
-		const baseDeDatos = client.db('series')
-		const coleccion = baseDeDatos.collection('series')
-		const result = await modeloSerie.findById(id)
-		const incrementarTemporada = procesarResultadoTemporada (result)
-		const agregarTemporada = await coleccion.updateOne( {"nombreSerie": result.nombreSerie },
-  		{ $set: {[incrementarTemporada] : [] } })
+			const conexion = await client.connect()
+			const baseDeDatos = client.db('series')
+			const coleccion = baseDeDatos.collection('series')
+			const result = await modeloSerie.findById(id)
+			const incrementarTemporada = procesarResultadoTemporada (result)
+			const agregarTemporada = await coleccion.updateOne( {"nombreSerie": result.nombreSerie },
+	  		{ $set: {[incrementarTemporada] : [] } })
+	  		res.redirect(`/admin/renderEditForm/${id}`)
 		} catch(e) {
 			
 			console.log(e);
@@ -37,14 +39,6 @@ controller.nuevaTemporada = async function (req,res) {
 		}
  	}
 	
-	
- // const result = await modeloSerie.findByIdAndUpdate(
-// 		'6704858169a07ab5246a5ffd',
-// 		{$push:{ temporada1: [ 'capitulo3' ]}} 
-// 	)
-// 		
-
-	res.redirect(`/admin/renderEditForm/${id}`)
 }
 
 function procesarResultadoTemporada (result) {
