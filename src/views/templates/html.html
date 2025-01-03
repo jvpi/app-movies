@@ -1,11 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/iconos/estrellas/style.css' />
+    <link rel='stylesheet' href='/iconos/play/style.css' />
+    <link rel='stylesheet' href='/iconos/descarga/style.css' />
+    <link rel='stylesheet' href='/iconos/circuloFlecha/style.css' />
+    <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
+    <!-- <link rel='stylesheet' href='/css/btnInstall.css' />  -->
+     <!-- <link rel='stylesheet' href='/css/responsive.css' />  -->
+    <script type="module" defer src="/javascripts/buscadorVistaInicio.js"></script>
+    
+    <script type="module" defer src="/javascripts/validarBuscadorVistaInicio.js"></script>
+    <script type="module" defer src="/javascripts/borderFocusBuscador.js"></script>
+    <script type="module" defer src="/javascripts/btnInstallPwa.js"></script>
+    <script type="module" defer src="/javascripts/slider.js"></script>
 </head>
 <body>
 	
+
+<nav class="nav">
+    
+  </nav>
+  <div class="content-main">
+    <header class="header">
+      <div class="content-tittle">
+        <a href="/" id="enlace-nombre-app"><h1 class="header-tittle">KAMUAI</h1></a>
+      </div>
+      <form action="#" class="form">
+        <input type="text" class="buscador" placeholder="Buscar Serie">
+         <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
+              <!-- <span class="icon-search"></span> -->
+              Buscar 
+          </button>
+      </form>
+    </header>
+    <section class="section">
+      <div class="content-serie-presentacion">
+        <img src="/imagenes/mr-robots.webp " alt="" class="img">
+        <div class="content-play-serie">
+          <h2 class="h2-mr-robots">Mr robots</h2>
+          <h3 class="h3-temporada">Temporada 1</h3>
+          <div class="content-iconos-estrellas">
+                  <span class="icon-star-full bg-yellow"></span>
+                  <span class="icon-star-full bg-yellow"></span>
+                  <span class="icon-star-full bg-yellow"></span>
+                  <span class="icon-star-full bg-yellow"></span>
+                  <span class="icon-star-half bg-yellow"></span>
+            </div>
+            <p class="content-descripcion-movie">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, amet corrupti. Architecto maiores necessitatibus soluta enim officia ab, ?
+            </p>
+            <div>
+              <a href="#">
+                <button type="button" id="button-play" class="btn-play">
+                  <span class="icon-play3 icono-play"></span>
+                  Play now
+                </button>
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="content-galeria-series">
+        <span class="icon-circle-left icon-circle" id="left"></span>
+        <span class="icon-circle-right icon-circle right" id="right"></span>
+
+        <div class="galeria-series" id="slider">
+          <div class="content-img-serie">
+            <a href="#" class="link-serie">
+              <img src="/imagenes/bad.jpg" alt="">
+            <div class="play-serie">
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>                
+              </button>
+            </div>
+            </a>
+          </div>
+
+          <div class="content-img-serie">
+            <a href="#" class="link-serie">
+              <img src="/imagenes/chernobil.jpg" alt="">
+            <div class="play-serie">
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>    
+              </button>
+            </div>
+            </a>
+          </div>
+           <div class="content-img-serie">
+            <a href="#" class="link-serie">
+               <img src="/imagenes/blackmirror.jpg" alt="">
+            <div class="play-serie">
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>
+              </button>
+            </div>
+            </a>
+          </div>
+           <div class="content-img-serie">
+            <a href="#" class="link-serie">
+             <img src="/imagenes/bojack-horseman.jpg" alt="">
+            <div class="play-serie">
+              
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>
+                
+              </button>
+            </div>
+            </a>
+          </div>
+           <div class="content-img-serie">
+            <a href="#" class="link-serie">
+               <img src="/imagenes/rick-and-morty.jpg" alt="">
+            <div class="play-serie">
+              
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>
+                
+              </button>
+            </div>
+            </a>
+          </div>
+           <div class="content-img-serie">
+            <a href="#" class="link-serie">
+              <img src="/imagenes/chernobil.jpg" alt="">
+            <div class="play-serie">
+              
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>
+                
+              </button>
+            </div>
+            </a>
+          </div>
+           <div class="content-img-serie">
+            <a href="#" class="link-serie">
+              <img src="/imagenes/rick-and-morty.jpg" alt="">
+            <div class="play-serie">
+              <button type="button" id="button-play" class="btn-play">
+                <span class="icon-play3 icono-play"></span>                
+              </button>
+            </div>
+            </a>
+          </div>
+
+
+        </div>
+ 
+      </div>
+    </section>
+  </div>
+   <!--  <header class="header">
+        <div class="header-container-movies">
+            <nav class="header-nav">
+              <div class="content-link-vista-inicio" id="content-enlace-inicio">
+                  <div class="ocultar-content-flecha-izq content-flecha-izq" id="content-flecha-izq">
+                    <span class="icon-arrow-left2"></span>
+                  </div>
+                  <a href="/" id="enlace-nombre-app"><h1 class="header-tittle">Kamuai</h1></a>
+               </div>
+              <form action="/resultado" method="get" class="form-resultado-incio" id="form-inicio">
+                  <input type="text" class="buscador vista-bsucador buscador-oculto" placeholder="Buscar" autocomplete="off" id="buscador">
+                  <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-inicio">
+                      <span class="icon-search"></span>
+                  </button>
+                      
+              </form>  
+            </nav>
+            <div class="flex-section">
+              <div class="section">
+                <div class="content">
+                  <h1 class="tittle-movie-principal">Mr <span> Robot</span></h1>
+                  <h3 class="h3-season">season 1</h3>
+                  <div class="content-iconos-estrellas">
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-full bg-yellow"></span>
+                    <span class="icon-star-half bg-yellow"></span>
+                  </div>
+                  <div>
+                    <span class="subtitulos">Accion / </span><span class="subtitulos">Drama / </span><span class="subtitulos">Suspenso</span>
+                  </div>
+                  <div>
+                    <a href="/serie/">
+                      <button type="button" id="button-play"><span class="icon-play3 icono-play"></span></button>
+                    </a>
+                  </div>
+                  <p class="content-descripcion-movie">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, amet corrupti. Architecto maiores necessitatibus soluta enim officia ab, ?</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-slider">
+        
+            <div class="content-slider">
+            
+                <%  if (series.length > 0) { %>
+                      <% for(let i = 0; i < series.length; i++){ %>
+                      <div class="card">  
+                        <a href=<%=`/series/${series[i].nombreSerie} `%> >
+                          <img src= <%=`imagenes/${series[i].nombreImg} `%> alt="" class="img-bojack">
+                          <div class="descripcion-movies">
+                            <h1 class="card-tittle-movies"><%=series[i].nombreSerie %></h1>
+                            <p class="card-descripcion-movies"><%=series[i].descripcion %></p>
+                          </div>
+                        </a>
+                      </div>
+                  <% } %> 
+                 <% } else { %>
+                    <div class="card">  
+                       
+                    </div>
+                 <% } %>
+
+                  
+             
+            </div>
+        </div>
+        <img src="imagenes/mr-robots.webp" alt="" srcset="" class="img-header">
+      </div>
+    </header> -->
+  
+    <!-- <div class='content-btn-intall'>
+        <button id="install_button" hidden class=''>
+            <span class="icon-download3"></span> Instalar App
+        </button>
+    </div> -->
 </body>
 </html>
+

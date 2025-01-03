@@ -34,22 +34,6 @@ inputCorreo.addEventListener('blur', async function (argument) {
     contentForm.insertBefore(fragmet,theFirstChild)
 	cerrarMsjFetch ()
 }
-// if (contraseña != confirmar_contraseña) {
-// 		errores.push({text:'las contraseña no coinciden'})
-		
-// 	}<h2>${product.name}</h2>
-
-/*eliminar mensaje de error*/
-
-const contentMsnError = document.getElementsByClassName('content-msg')[0]
-
-
-if (contentMsnError != undefined) {
-	setTimeout(function () {
-		contentMsnError.remove()
-	}, 2000)
-	
-}
 
 function cerrarMsjFetch () {
 	const cross = document.getElementById('cerrar-mesanje')

@@ -1,7 +1,19 @@
-/*input, textarea{
-	border: 1px solid black;
-}*/
+.header-admi{
+	width: 100%;
+	height: 60px;
+	position: relative;
+	background-image: linear-gradient(to right top, #051937, #001e2f, #002021, #121e18, #1c1d19);
+}
 
+.content-iconos{
+	width: inherit;
+	
+	height: inherit;
+	position: absolute;
+	right: 20px;
+	top: 25%;
+	cursor: pointer;
+}
 
 .textarea{
 	resize: none;
@@ -16,9 +28,6 @@
 	
 }
 
-.section{
-/*	display: flex;*/
-}
 .h1{
 	color: black;
 }
@@ -184,14 +193,13 @@
 	display: flex;
 	justify-content: center;
 	
-/*	padding: 20px 0;*/
+
 }
 .contet-info-temporadas{
 	width: 89%;
 	color: #000;
 	border-radius:5px ;
 	background-color: #fff;
-/*	height: 180px;*/
 	margin-right: 15px;
 	padding: 40px 0;
 

@@ -1,87 +1,212 @@
-
-
 body{
- background-color: #131314;
+ background-color: #192130;
+ width: 100%;
+ display: flex;
+  position: relative;
+padding-bottom: 2000px;
  
+}
+.nav{
+  width: 10%;
+  height: 100vh;
+  
+  position: absolute;
+}
+.content-main{
+  width: 70%;
+  height: 100vh;
+ 
+  margin: 0 auto;
+}
+.form{
+  position: relative;
+
 }
 .header{
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-container-movies{
-  width: 90%;
-  height: 90%;
-  border: 2px solid #fff;
-  border-radius: 7px;
-  position: relative;
-  overflow: hidden;
-  z-index: 2;
-}
-.header-nav{
-  width: 90%;
-  height: 8%;
-  margin: 0 auto;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   
 }
-
-.header-tittle{
-  font-weight: bold;
-  font-size: 1.4em;
-}
-
-.img-header{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: -1;
- 
-}
-.content-buscador{
-  width: 50%;
-}
-.content-centrar{
- margin-left: 13px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
 .buscador{
-  border: 1px solid gray;
-  width: 70%;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius:15px;
-  padding: 8px 15px;
+  border-radius: 7px;
+  width: 289px;
+  padding: 8px 20px;
   outline: none;
-
-
-}
-
-.form-resultado-incio{
-  width: 80%;
-   display: flex;
-  justify-content: flex-end;
-}
-.content-link-vista-inicio{
-  width: 40%;
+  background-color: #252E40;
+  border: 1px solid gray;
+  color: #fff;
 }
 .boton-buscar{
-  background-color: #464646;
-  padding: 8px;
-  width: 64px;
-  margin-left: -5px;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  position: absolute;
+  padding: 8px 0;
+  width: 80px;
+  margin-left: 5px;
+  border-bottom-right-radius:7px;
+  border-top-right-radius: 7px;
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid #FCC737;
+  background-color: #FCC737;
+  color: #fff;
+  font-size: 1em;
+  right: 0px;
 
 }
+ 
+
+.content-tittle{
+  padding: 7px 0px;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #FCC737;
+}
+
+.section{
+  width: 100%;
+ 
+}
+.content-serie-presentacion{
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+}
+.img{
+   height: 400px;
+   object-fit: cover;
+   max-width: 100%;
+}
+.content-play-serie{
+   width: 50%;
+   position: absolute;
+   padding-left: 20px;
+   top: 20%;
+}
+.h2-mr-robots{
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #FCC737;
+}
+.h3-temporada{
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.content-iconos-estrellas{
+margin-bottom: 20px;
+}
+.bg-yellow{
+  color:#F6DE18;
+}
+.content-descripcion-movie{
+  margin-bottom: 20px;
+}
+.btn-play{
+  background-color:#FCC737 ;
+  color: #fff;
+  padding: 9px 0;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+}
+.content-galeria-series{
+  margin-top: 50px;
+  position: relative;
+  
+}
+.galeria-series{
+  display: grid;
+  grid-template-columns: repeat(7,19%); 
+  gap: 10px;
+  width:100%;
+  position: relative;
+   overflow: hidden;
+}
+.icon-circle{
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 2em;
+  transform: translateY(-50%);
+
+}
+.right{
+  right:  5px;
+}
+.galeria-series img{
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.link-serie{
+  position: relative;
+  
+}
+.play-serie{
+  position: absolute;
+  bottom: 10%;
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-img-serie{
+  position: relative;
+  left: -106%;
+}
+.play-serie p{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.play-serie button{
+  width:55px; 
+  border-radius: 5px;
+  height: 37px;
+  font-size:1.3em;
+}
+  
+ @media  (max-width: 420px){
+    .content-main{
+    width: 100%;
+  }
+  .buscador{
+    width: 218px;
+  }
+  .header{
+    padding: 20px;
+  }
+  .content-tittle{
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+  }
+  .boton-buscar{
+    width: 55px;
+  }
+  .content-descripcion-movie{
+    display: none;
+  }
+  .content-play-serie{
+    padding-left:4px;
+    top: 43%;
+  }
+  .galeria-series{
+    grid-template-columns: repeat(7,30%); 
+  
+  }
+  .content-img-serie{
+   
+    left: -100%;
+  }
+}
+
+/*
+
+
 .border-color-buscador{
   border-color: #F4F4F4;
 }
@@ -89,4 +214,6 @@ body{
 .ocultar-content-flecha-izq{
    
     display: none;
-  }
+  }*/
+
+  /*responsive*/

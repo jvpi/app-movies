@@ -13,7 +13,7 @@ const passport = require('passport')
 const cors = require('cors')
 
 const app = express();
-//require('./config/passport.js')
+require('./config/passport.js')
 app.disable('x-powered-by')
 app.use(cors())
 // view engine setup
@@ -41,6 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(function (req, res, next) {
    res.locals.error_msg = req.flash('error_msg');
+   res.locals.error = req.flash('error');
+   /*este es el ssuario guardado en sesion por passport*/
+   res.locals.usuario = req.user || null;
    next()
 })
 

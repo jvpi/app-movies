@@ -5,7 +5,6 @@ const modeloSerie = require('../modelos/series.js')
 controller.series = async function(req, res, next) {
   try {
     const series = await modeloSerie.find()
-    console.log(series)
     res.render('vistaSeries',{series} );
   } catch(e) {
     const series = []

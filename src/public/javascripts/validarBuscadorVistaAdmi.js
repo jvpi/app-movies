@@ -62,7 +62,6 @@ function validarInputDescripcion () {
 }
 function validarFomrObj() {
 	const valorDePropiedades = Object.values(validarFomr)
-	console.log(valorDePropiedades)
 	const validarValorPropiedades = valorDePropiedades.every(function (value) {
 		return value == true
 	})

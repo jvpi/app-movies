@@ -1,5 +1,5 @@
 body{
-	background-color: #131314;
+	background-color: #192130;
 }
 .linea-divisora{
 	display: none;
@@ -12,12 +12,8 @@ body{
 	align-items: center;
 }
 .section{
-	width: 90%;
-	height: 90%;
-	border: 2px solid #fff;
-	border-radius: 7px;
-	background-color: #000;
-	overflow: scroll;
+	width: 70%;
+	height: 90%;	
 }
 .header{
 	width: 97%;
@@ -28,33 +24,39 @@ body{
 .nav{
 	width: 20%;
 	display: flex;
-	justify-content: center;
+	/*justify-content: center;*/
 	align-items: center;
 }
 .form{
 	width: 80%;
 	display: flex;
 	justify-content: flex-end;
+	position: relative;
 }
 .buscador{
-	border: 1px solid gray;
-	width: 50%;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius:15px;
-	padding: 8px 15px;
-	outline: none;
+ border-radius: 7px;
+  width: 289px;
+  padding: 8px 20px;
+  outline: none;
+  background-color: #252E40;
+  border: 1px solid gray;
+  color: #fff;
 
 }
 
 .boton-buscar{
-	  background-color: #464646;
-	  padding: 8px;
-	  width: 64px;
-	  margin-left: -6px;
-	  border-bottom-right-radius: 15px;
-	  border-top-right-radius: 15px;
-	  cursor: pointer;
-	  border: 1px solid gray;
+	position: absolute;
+	 padding: 8px 0;
+  width: 80px;
+  margin-left: 5px;
+  border-bottom-right-radius:7px;
+  border-top-right-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #FCC737;
+  background-color: #FCC737;
+  color: #fff;
+  font-size: 1em;
+  right: 0px;
 }
 .right{
 	background-color: blue;
@@ -63,10 +65,14 @@ body{
 }
 
 .titulo{
+	color: #FCC737;
 	font-weight: bold;
 	font-size: 1.4em;
 }
+.content-resultado{
+	margin-top: 49px;
 
+}
 .card-resultado{
 	width: 80;
 	height: 221px;
@@ -77,11 +83,12 @@ body{
 	
 }
 .img-bojack{
-   width: 122px;
    border-radius: 5px;
-    
+ 
 }
-
+/*
+APIs de PNL
+*/
 .resultado-busqueda{
 	text-align: center;
 	margin-top: 30px;
@@ -90,9 +97,11 @@ body{
 .descripcion{
 	height:100%;
 	width: 60%;
+	
+	padding-left: 20px;
 }
 .card{
-	width: 15%;
+	width: 20%;
 	height:100%;
 	display: flex;
 	
@@ -121,7 +130,7 @@ body{
 
 @media (max-width: 420px){
 	.header{
-		padding: 5px 15px;
+		padding: 20px;
 		width: 100%;
 		justify-content: space-between;
 	}
@@ -129,22 +138,14 @@ body{
 		width: 34%;
 	}
 	.buscador{
-		padding: 7px 42px 7px 13px;
-		height: 31px;
-		border-radius: 15px;
+		width: 218px;
 	}
 	.form{
 		position: relative;
-		justify-content: flex-start;
 	}
 	.boton-buscar{
-		padding: 0;
-		background-color: transparent;
-		border: none;
-		position: absolute;
-		top: 8px;
-		font-size: .9em;
-		right: 10px;
+
+		width:55px;
 	}
 	.titulo{
 		font-size: 1.2em;
@@ -177,8 +178,6 @@ body{
 	}
 	.content-descripcion-movie{
 		display: none;
-
-
 	}
 	.resultado-busqueda{
 		text-align: center;
@@ -201,9 +200,13 @@ body{
 		display: block;
 
 	}
-	.buscador-oculto{
-		display: none;
+	.content-resultado{
+		margin-top: 22px;
+	
 	}
+	/*.buscador-oculto{
+		display: none;
+	}*/
 	/*.boton-buscar-resposive-resultado{
 		background-color: transparent;
 		border: none;

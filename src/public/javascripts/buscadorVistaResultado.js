@@ -29,6 +29,6 @@ function ocultarBuscador() {
 }
 
 if (isMobile) {
-	ocultarBuscador()
-	aparecerBuscador() 
+	// ocultarBuscador()
+	// aparecerBuscador() 
 }
