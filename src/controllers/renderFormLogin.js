@@ -1,7 +1,6 @@
 const controller = {}
 const passport = require('passport')
-const usuario = require('../modelos/usuarios.js')
-const bcrypt = require('bcryptjs')
+
 controller.renderFormLogin = function (req,res) {
 	res.render('vistaLogin');
 }

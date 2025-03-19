@@ -4,8 +4,8 @@ const {paginaInicio} = require('../controllers/index.js')
 const {series} = require('../controllers/series.js')
 const {renderResultado} = require('../controllers/resultado.js')
 router.get('/',paginaInicio)
-router.get('/series/:nombreSerie',series)
-router.get('/resultado',renderResultado)
+router.get('/series/:nombreSerie/:temporada/:capitulo',series)
+router.get('/resultado/:nombreSerie',renderResultado)
 
 
 module.exports = router;

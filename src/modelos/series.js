@@ -12,24 +12,28 @@ const serieSchema = new Schema({
 		 required: true,
     	 unique: true
 	},
-	//  temporadas:{
-	// 	type: [],
-	// 	required: true,
-    	
-	// },
 	nombreImg:{
 		type:String,
-		 required: true,
-    	// unique: true
+		required: true,
 	},
 	descripcion:{
 		type:String,
 		required: true
+	},
+	nombreVideo:{
+		type:String,
+		required: true,
+    	
+	},
+	 categorias:{
+		type: [],
+		required: true,
+	},
+	puntuacion:{
+		type:String,
+		required: true,
+    	
 	}
-	// plataforma:{
-	// 	type:String,
-	// 	required: true
-	// }
 },{timeStamp:true})
 
 

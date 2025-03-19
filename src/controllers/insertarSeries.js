@@ -8,13 +8,22 @@ const client = new MongoClient(URI)
 
 controller.insertarSerie = async function(req,res) {
 	try {
-		const {nombreSerie,nombreCapitulo,nombreImg,descripcion} = req.body
+		const {nombreSerie,nombreCapitulo,
+			nombreImg,descripcion,nombreVideo,
+			categoria1,categoria2,categoria3,
+			puntuacion
+		} = req.body
+		
 		const newSerie = new modeloSerie({
-				nombreSerie:nombreSerie,
-				nombreImg:nombreImg,
-				descripcion:descripcion
+				nombreSerie,
+				nombreImg,
+				descripcion,
+				nombreVideo,
+				categorias:categoriaArray (categoria1,categoria2,categoria3),
+				puntuacion
 			})
-		const result = await newSerie.save()
+		
+		await newSerie.save()
 		agragarTemporada(nombreSerie,nombreCapitulo)
 		res.redirect('/admin')
 	} catch(e) {
@@ -24,6 +33,11 @@ controller.insertarSerie = async function(req,res) {
 	}
 	
 
+}
+function categoriaArray (categoria1,categoria2,categoria3) {
+	const array = [categoria1,categoria2,categoria3]
+	return array
+	
 }
 
 async function agragarTemporada(nombre,capitulo) {

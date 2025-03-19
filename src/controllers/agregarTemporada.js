@@ -21,7 +21,6 @@ controller.nuevaTemporada = async function (req,res) {
  	}
  	
  	if (string == 'nueva-temporada') {
- 		
  		try{
 			const conexion = await client.connect()
 			const baseDeDatos = client.db('series')

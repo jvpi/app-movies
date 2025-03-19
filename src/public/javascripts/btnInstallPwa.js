@@ -1,22 +1,16 @@
 let deferredPrompt = null
 let btnInstall = document.getElementById('install_button')
-let classBtnI = document.getElementsByClassName('btn-install')
 let prompt;
-
-
-btnInstall.addEventListener('click',installPwa)
-addEventListener('beforeinstallprompt',function (e) {
+window.addEventListener('beforeinstallprompt',function (e) {
 	deferredPrompt = e
 	btnInstall.hidden = false;
-  btnInstall.classList.add('btn-install')
+  // btnInstall.classList.add('btn-install') 
   prompt = true
+btnInstall.addEventListener('click',installPwa)
  
 })
 
-
-
 function installPwa() {
- 
 	deferredPrompt.prompt();
 	btnInstall.disabled = true
 	deferredPrompt.userChoice.then(choiceResult => {

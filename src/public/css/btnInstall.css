@@ -1,7 +1,7 @@
 .content-btn-intall{
 	display: flex;
 	justify-content: center;
-	
+	background-color: red;
 }
 
 
@@ -14,8 +14,7 @@
 	font-size: 1.5em;
 	width: 100%;
 	position: fixed;
-	bottom: 0;
+	bottom: 0px;
 	z-index: 10;
 	background: rgb(151, 43, 213);
-	
 }

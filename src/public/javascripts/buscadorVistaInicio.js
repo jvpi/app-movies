@@ -37,7 +37,17 @@ if (isMobile) {
 
 		})
 	}
+function establecerBusquedaAlaUrl () {
+	let buscador = document.getElementById('buscador')
+	let btnBuscador = document.getElementById('boton-buscador-vista-inicio')
+    btnBuscador.addEventListener('click', function (argument) {
+    	if (buscador.value != '') {
+    		window.location.href = `http://localhost:3000/resultado/${buscador.value}` ;
+    	}
+		return
+	})
+}
 
-
-
-
+establecerBusquedaAlaUrl ()
+const x = document.querySelectorAll('.content-img-serie')
+console.log(x.length)

@@ -13,7 +13,7 @@ controller.registro = async function (req,res) {
 	const correoUsuario = await usuario.findOne({correo:correo})
 	
 /*el error de correo no pinta en pantalla porque el error de contraseña no le permite al ejecucion de 
-nodejs llegay hay*/
+nodejs llegar hay*/
 	if (req.headers.api == 'fetch') {
 		if (correoUsuario) {
 			res.json({ user: 'este correo ya esta en uso '})

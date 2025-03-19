@@ -38,11 +38,11 @@
         <th></th>
         <th></th>
       </tr>
-       <% for (let i = 0; i < capitulos.length; i++) { %>
+       <% for (let i = 0; i < cantidadTemporadas.length; i++) { %>
           <tr>
             <td class="border temporada">temporada<%= i+1 %></td>
-             <% for (let j = 0; j < capitulos[i].length; j++) { %>
-              <td class="border capitulo"><%= capitulos[i][j] %></td>
+             <% for (let j = 0; j < cantidadTemporadas[i].length; j++) { %>
+              <td class="border capitulo"><%= cantidadTemporadas[i][j] %></td>
              <%} %> 
           </tr>
        <%} %>  

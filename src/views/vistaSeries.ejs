@@ -7,116 +7,92 @@
   <link rel='stylesheet' href='/iconos/play/style.css' />
   <link rel='stylesheet' href='/css/btnInstall.css' />
   <link rel="stylesheet" href="/css/vistaSeries.css"/>
-  <script type="module" defer src="/javascripts/reemplazarCaracter.js"></script>
   <script type="module" defer src="/javascripts/seleccionarCapitulos.js"></script>
   <script type="module" defer src="/javascripts/buscador.js"></script>
   <script type="module" defer src="/javascripts/menuDesplegable.js"></script>
   <script type="module" defer src="/javascripts/menuHamburguesa.js"></script>
   <script type="module" defer src="/javascripts/buscador.js"></script>
-  <script type="module" defer src="/javascripts/btnInstallPwa.js"></script>
   <script type="module" defer src="/javascripts/validarBuscadorVistaSerie.js"></script>
+  <script type="module" defer src="/javascripts/vistaSerie.js"></script>
   <link rel='stylesheet' href='/iconos/menu/style.css' />
   <link rel='stylesheet' href='/iconos/cross/style.css' />
   <link rel='stylesheet' href='/iconos/circle-right/style.css' />
   <link rel='stylesheet' href='/iconos/flecha-izq/style.css' />
-    <link rel='stylesheet' href='/iconos/ctrl/style.css' />
+  <link rel='stylesheet' href='/iconos/ctrl/style.css' />
+ <link rel='stylesheet' href='/iconos/descarga/style.css' />
 
+ <script type="module" defer src="/javascripts/btnInstallPwa.js"></script>
 </head>
 <body id="body">
-  <header hidden class="header-serie" > 
-    <div class="ocultar-conten-flecha-izq" id="content-flecha-izq">
-      <span class="icon-arrow-left2"></span>
-    </div>
-    <div class="enlace-inicio " id="enlace-inicio">
-      <span class="icon-menu icon-menu-desplegable" id="icon-menu-desplegable"></span>
-       <a href="/" class="header-link">
-        <!-- <span class="icon-play3 icono-play-series"></span> -->
-        <span>Kamuai</span>
-       </a>
-    </div>
-    <div class="menu-hamburguesa" id="menu-hamburguesa">
-      <span class="icon-menu" id="icon-menu"></span>
-      
-    </div>
-    <div class="content-buscador " id="content-buscador">
-      <div class="content-centrar">
-        <form action="/resultado" id="form-vista-serie">
-          <input type="text" class="buscador" autocomplete="off" placeholder="Buscar" id="buscador-vista-serie">
-          <button class="boton-buscar boton-buscar-resposive " id="boton-buscar">
-                <span class="icon-search"></span>
+  <header  class="header" > 
+     <div class="content-tittle">
+        <a href="/" id="enlace-nombre-app"><h1 class="header-tittle">KAMUAI</h1></a>
+     </div>
+      <div  class="form">
+        <input type="text" id="buscador" class="buscador" placeholder="Buscar Serie">
+         <button class="boton-buscar boton-buscador-vista-inicio" id="boton-buscador-vista-serie">
+        
+              Buscar 
           </button>
-        </form>
-        
       </div>
+  </header>
+  <div class="centrar-content-video">
+    <% if (typeof capituloSeleccionado == 'undefined') { %>
+        <h1>no se encontraron datos</h1>
+
+    <% } else { %>
+     <div class="content-video" id="content-video">
+      <video src=<%= `/series/${serie.nombreSerie}/${temporada}/${capituloSeleccionado}.mkv` %> controls></video>
       
     </div>
-  </header>
-  <nav class="nav aparecer-menu" id="nav">
-      <div class="content-icon-menu-link">
-        <!-- <span class="icon-menu icon-menu-desplegable" id="icon-menu-hamburguesa"></span> -->
+    <div class="content-descripcion-video">
+      <h2 class="margin-top h2-title"><%=`${serie.nombreSerie}` %></h2>
+      <h3 class="margin-top" id="temporada-actual"><%=temporada.replace('-',' ')%></h3>
+      <div class="margin-top categorias" id="categorias">
+         <% for(let i = 0; i < serie.categorias.length; i++){ %>
+          <span><%=serie.categorias[i] %> / </span>
+         <% } %> 
 
-       <a href="/" class="header-link">
-  
-        <span class='titulo-app'>Kamuai</span>
-       </a>
-       <div class='content-cross'>
-           <span class="icon-cross" id="icon-cross"></span>
-        </div>
-      
       </div>
-      <ul id="ul" class="acordeon ul">
-
-          <% if (series.length > 0) { %>
-             <% let i = 0 %>
-             <% for (propiedad in series[0]) { %>
-             <% if (Array.isArray(series[0][propiedad])) {%>
-               <%  i ++ %>
-                   <li class="lista">
-                    <h1 class="h1 temporada">
-
-                      <span class="icon-circle-right circle-right"></span>
-                       
-                      temporada<%=`${i}`%> 
-                    </h1>
-                   <% for (let temporada of series[0][propiedad]) { %>
-                     <p class="capitulo"> 
-                            <span class='icon-ctrl icon-ctrl-style'></span>
-                        <%=`${temporada}`%>
-                           </p>
-                 
-                    <%} %>
-                  </li>   
-     
-             <% }%>
- 
-             
-            <%  } %>
-
-          <% } else { %>
-               <li class="lista">
-               </li>  
-
-          <% } %>
-          
+     <div class="content-select-box" id="content-select-box">
+      <div class="content-temporada-actual">
+         <span id="temporadaSeleccionda">temporada 3</span>
+         <span class="icono">></span>
+      </div>
+      <div class="content-temporada-hidden ocultar-content-temporada" id="content-temporada-hidden">
         
-      </ul>
-    </nav>
-    
-  <div class="centrar-content-video">
-    
-    <div class="content-video" id="content-video">
+         <% for(let i = 0; i < obtenerTotalTemporadas.length; i++){ %>
+         <!-- <span class="temporada"><%=obtenerTotalTemporadas[i] %></span> -->
   
+        <a class="temporada" href=<%= `/series/${serie.nombreSerie}/${obtenerTotalTemporadas[i]}/capitulo1`%>>
+                <%=obtenerTotalTemporadas[i] %>
+                 </a>
+         <% } %> 
+      </div>
+      
+     </div>
+    
+      <div class="margin-top content-capitulos" id="content-capitulos">
+        
+         <% for(let i = 0; i < cantidadTotalCapitulos.length; i++){ %>
+          <a class="cantidad-capitulos" href=<%= `/series/${serie.nombreSerie}/${temporada}/${cantidadTotalCapitulos[i]}` %>><%=[i + 1]  %></a>
+         <% } %>  
+      </div>
+
+      <p class="margin-top descripcion-serie">
+        <%= serie.descripcion %>
+        
+      </p>
     </div>
   </div>
-
-  <div class='content-btn-intall ' id='content-btn-intall' >
-        <button id="install_button" hidden  >
-            <span class="icon-download3"></span> Instalar App
+ 
+  <div class='content-btn-install ' id='content-btn-intall'>
+        <button id="install_button" class="btn-install">
+            <span class="icon-download3 "></span> Instalar App
         </button>
   </div>
+  <% } %>
 
-<div style="color:black;">
- 
-</div>
+
 </body>
 </html>

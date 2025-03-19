@@ -3,7 +3,7 @@ body{
  width: 100%;
  display: flex;
   position: relative;
-padding-bottom: 2000px;
+/*padding-bottom: 2000px;*/
  
 }
 .nav{
@@ -15,13 +15,9 @@ padding-bottom: 2000px;
 .content-main{
   width: 70%;
   height: 100vh;
- 
   margin: 0 auto;
 }
-.form{
-  position: relative;
 
-}
 .header{
   width: 100%;
   padding: 20px 0;
@@ -55,7 +51,12 @@ padding-bottom: 2000px;
 
 }
  
-
+.form{
+  position: relative;
+}
+.div{
+  height: 100px;
+}
 .content-tittle{
   padding: 7px 0px;
   font-weight: bold;
@@ -116,7 +117,7 @@ margin-bottom: 20px;
 .content-galeria-series{
   margin-top: 50px;
   position: relative;
-  
+
 }
 .galeria-series{
   display: grid;
@@ -125,6 +126,8 @@ margin-bottom: 20px;
   width:100%;
   position: relative;
    overflow: hidden;
+
+
 }
 .icon-circle{
   position: absolute;
@@ -141,6 +144,7 @@ margin-bottom: 20px;
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
+   
 }
 .link-serie{
   position: relative;
@@ -158,6 +162,10 @@ margin-bottom: 20px;
   position: relative;
   left: -106%;
 }
+.content-img-serie1{
+  position: relative;
+  left: -106%;
+}
 .play-serie p{
   font-weight: 600;
   margin-bottom: 10px;
@@ -168,11 +176,16 @@ margin-bottom: 20px;
   height: 37px;
   font-size:1.3em;
 }
-  
+  .w{
+    width: 100px  ;
+    height: 100px;
+    border: 1px solid gray;
+  }
  @media  (max-width: 420px){
     .content-main{
     width: 100%;
   }
+
   .buscador{
     width: 218px;
   }
@@ -202,18 +215,11 @@ margin-bottom: 20px;
    
     left: -100%;
   }
+  .btn-install{
+      display: block;
+    }
 }
 
-/*
 
 
-.border-color-buscador{
-  border-color: #F4F4F4;
-}
 
-.ocultar-content-flecha-izq{
-   
-    display: none;
-  }*/
-
-  /*responsive*/

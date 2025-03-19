@@ -4,12 +4,17 @@ controller.renderEditForm = async function (req,res) {
 	const {id} = req.params
 	try {
 		const result = await modeloSerie.findById(id)
-		let  cantidadTemporadas = procesarTemporadas(result)
-		let capitulos  = Object.values(result._doc).filter(function (elemento) {
-			return Array.isArray(elemento) 	
+		console.log(result._doc)
+		let cantidadTemporadas = Object.keys(result._doc)
+		.filter(function (elemento) {
+			let keyTemporada = elemento.includes('temporada')
+			return keyTemporada	
 		})
-		console.log(result)
-		res.render('renderEditForm',{result,capitulos})
+		.map(function (elemento) {
+			const temporada = result._doc[elemento]
+			return temporada
+		})
+		res.render('renderEditForm',{result,cantidadTemporadas})
 	} catch(e) {
 		// statements
 		console.log(e);
@@ -17,14 +22,15 @@ controller.renderEditForm = async function (req,res) {
 
 
 }
-function procesarTemporadas (result) {
+// function procesarTemporadas (result) {
 	
-	let propiedades = Object.keys(result._doc)
-	const r = propiedades.filter(function (elemento) {
-		return elemento.includes('temporada')
+// 	let propiedades = Object.keys(result._doc)
+// 	//console.log(propiedades)
+// 	const r = propiedades.filter(function (elemento) {
+// 		return elemento.includes('temporada')
 
-	})
-	return r
-}                
+// 	})
+// 	return r
+// }                
 
 module.exports = controller
