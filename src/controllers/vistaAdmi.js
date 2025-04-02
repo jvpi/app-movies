@@ -10,10 +10,12 @@ controller.renderVistaAdmi = async function (req,res){
     // .catch(err => {
     //     console.error(err);
     // });
-
+	
+	
 	try {
+
 		const series = await modeloSerie.find()
-		
+
 		res.render('vistaAdmin',{series})
 	} catch(e) {
 		const series = []
@@ -22,5 +24,6 @@ controller.renderVistaAdmi = async function (req,res){
 	}
 	
 }
+
 
 module.exports = controller

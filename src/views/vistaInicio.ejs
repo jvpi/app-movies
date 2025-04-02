@@ -66,16 +66,16 @@
             </div>
         </div>
       </div>
-
+      <% for (let i = 0; i < almacenDeArrays.length; i++) { %>
       <div class="content-galeria-series">
         <span class="icon-circle-left icon-circle" id="left"></span>
         <span class="icon-circle-right icon-circle right" id="right1"></span>
 
         <div class="galeria-series" id="slider">
-          
+          <% for (let j = 0; j < almacenDeArrays[i].length; j++) { %>
            <div class="content-img-serie">
             <a href="#" class="link-serie">
-              <img src="/imagenes/peakyblinders.webp" alt="">
+              <img src="/imagenes/peakyblinders.webp" alt=""> 
             <div class="play-serie">
 
               <button type="button" id="button-play" class="btn-play">
@@ -85,161 +85,13 @@
             </div>
             </a>
           </div> 
-         
-          <div class="content-img-serie">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/breakingbad.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>                
-              </button>
-            </div>
-            </a>
-          </div>
-
-          <div class="content-img-serie">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/chernobyl.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>    
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie">
-            <a href="#" class="link-serie">
-               <img src="/imagenes/blackmirror.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie">
-            <a href="#" class="link-serie">
-             <img src="/imagenes/bojack.jpg" alt="">
-            <div class="play-serie">           
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>         
-              </button>
-            </div>
-            </a>
-          </div> 
-         <div class="content-img-serie">
-            <a href="#" class="link-serie">
-               <img src="/imagenes/rickandmorty.jpg" alt="">
-            <div class="play-serie">
-              
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-                
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/merlina.webp" alt="">
-            <div class="play-serie">
-              
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-                
-              </button>
-            </div>
-            </a>
-          </div>  
+         <%} %> 
+          
         </div> 
       </div>
-
-
-      <div class="content-galeria-series">
-        <span class="icon-circle-left icon-circle" id="left"></span>
-        <span class="icon-circle-right icon-circle right" id="right"></span>
-        <div class="galeria-series" id="slider1">
-
-             <div class="content-img-serie1">
-                <a href="#" class="link-serie">
-                  <img src="/imagenes/peakyblinders.webp" alt="">
-                <div class="play-serie">
-                  <button type="button" id="button-play" class="btn-play">
-                    <span class="icon-play3 icono-play"></span>                
-                  </button>
-                </div>
-                </a>
-
-             </div>  
          
-          <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/breakingbad.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>                
-              </button>
-            </div>
-            </a>
-          </div>
+       <%} %> 
 
-          <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/chernobyl.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>    
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-               <img src="/imagenes/blackmirror.jpg" alt="">
-            <div class="play-serie">
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-             <img src="/imagenes/bojack.jpg" alt="">
-            <div class="play-serie">           
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>         
-              </button>
-            </div>
-            </a>
-          </div> 
-         <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-               <img src="/imagenes/rickandmorty.jpg" alt="">
-            <div class="play-serie">
-              
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-                
-              </button>
-            </div>
-            </a>
-          </div>
-           <div class="content-img-serie1">
-            <a href="#" class="link-serie">
-              <img src="/imagenes/merlina.webp" alt="">
-            <div class="play-serie">
-              
-              <button type="button" id="button-play" class="btn-play">
-                <span class="icon-play3 icono-play"></span>
-                
-              </button>
-            </div>
-            </a>
-          </div> 
-        </div> 
-      </div>
-      
 
       <div class='content-btn-intall ' id='content-btn-intall' >
           <button id="install_button"  hidden class="btn-install">
